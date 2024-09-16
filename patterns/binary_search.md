@@ -59,7 +59,7 @@ def find(nums, target):
             else:
                 low = mid + 1
         else:
-            if nums[mid] < target <= nums[mid] :
+            if nums[mid] < target <= nums[high] :
                 low = mid + 1
             else:
                 high = mid - 1
@@ -96,7 +96,18 @@ def find(nums, target):
 ```
 For this problem one should take an example to find the while loop condition and the left and right pointer adjustments. 
 ```
-#### find max in rotated sorted array
+#### find min in rotated sorted array
+```
+def find_min(nums, target):
+    low, high = 0, len(nums)-1
+    while low < high:
+        mid = (low + high)//2
+        if nums[mid] > nums[high]:
+            low = mid + 1
+        else:
+            high = mid
+    return low
+```
 
 #### Single element in sorted array LC-540
 ```
@@ -139,8 +150,20 @@ def singleNonDuplicate(nums):
 minimize max or max min is a pattern for this
 ```
 LC-2439
+LC-2968 (LC hard practice)
 
 ```
 #### Median of two sorted arrays
 ```
+```
+
+####  Nexted binary search 
+```
+LC 1608
+```
+
+### LC for practice
+```
+LC-2968
+LC -1608
 ```
