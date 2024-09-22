@@ -254,7 +254,41 @@ class Solution:
         return self.pathSum
 
 ```
+### Root to leaf sum number
+```
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def helper(self, root, curr):
+        curr = curr*10 + root.val
+        if not root.left and not root.right:
+            return curr
+        l = self.helper(root.left, curr)
+        r = self.helper(root.right, curr)
 
+        return l+r
+
+    def sumNumbers(self, root: Optional[TreeNode]) -> int:
+        return self.helper(root, 0)
+```
+
+### Construct BT from Inorder and PostOrder traversal
+```
+```
+
+### Longest ZigZag Path in a Binary Tree - LC1372
+```
+If I am at a node called root, I will pass my left child a message to goRight and right child a message to goLeft, if goLeft if True and I am going left then steps = steps+1, else steps = 1, viceversa, at each step update maxPath = max(maxPath, steps)
+```
+
+### Maximum Width of BT - LC662
+```
+Pattern is to use the following : if a node has index i, left child would have index 2i+1 and right child 2i+2 . Then use BFS to level order traverse the tree
+```
 
 ## Practice
 LC105
