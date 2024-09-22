@@ -34,3 +34,7 @@ step 4: if the window is of length k then add dq[0] to result as we always keep 
 ### Pattern 8 - LC 1838 - revisit
 ```
 ```
+
+### Pattern 9 - LC 560, 930
+```
+```
