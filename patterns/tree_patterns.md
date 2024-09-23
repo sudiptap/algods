@@ -290,9 +290,124 @@ If I am at a node called root, I will pass my left child a message to goRight an
 Pattern is to use the following : if a node has index i, left child would have index 2i+1 and right child 2i+2 . Then use BFS to level order traverse the tree
 ```
 
+### All Nodes Distance K in Binary Tree - LC863
+```
+e.g. LC2385
+Get map to store parent pointer, then perform level order traversal
+
+```
+
+### Validate binary tree nodes - LC1361
+```
+```
+### Find Largest value in each Tree row - LC515
+```
+BFS level order solution is easy
+DFS pattern is interesting
+idea is the following
+1. traverse the tree in inorder fashion
+2. child_i will be called with depth(node i) + 1, root node being at depth 0
+3. each time a node is visited add the node to a map,where map[depth] = node_val, here if the len(map)== depth then, I am visiting this depth for the first time and hence we will do map[depth] = node_val, however if len(map) > depth then, we have visited this depth befiore so map[depth] = max(map[depth], node_val)
+```
+
+### Amount of time binary tree could be infected - LC2385
+```
+```
+
+### Distribute Coins in BT - LC979
+```
+```
+
+### Count the nodes at distance K from leaf
+```
+```
+
+### Diameter of a BT - LC543
+```
+Very standard pattern where we do the following
+standing at a node we find current value might be the asnwer, but there is a possibility that the best answer will be found by extending the solution upward
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def __init__(self):
+        self.diameter = 0
+    
+    def helper(self, root):
+        if not root:
+            return 0
+        
+        lh, rh = self.helper(root.left), self.helper(root.right)
+        self.diameter = max(self.diameter, lh+rh)
+
+        return max(lh, rh) + 1
+
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        self.helper(root)
+        return self.diameter
+```
+
+### Morriss Traversal
+```
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Practice
 LC105
 LC958
 LC113
 LC112
 LC1339
+LC1361 - validate binary tree nodes
+LC2385 - do using DFS
