@@ -20,6 +20,11 @@ def buildTree(curr_index, left, right)
 LC 105
 ```
 
+### Binary Tree construction from description
+```
+Leetcode 2196
+```
+
 ### Lowest Common Ancestor
 
 ```
@@ -350,6 +355,39 @@ class Solution:
         return self.diameter
 ```
 
+### Even Odd Tree - LC1609
+```
+both BFS and DFS introduces pattern, practice both
+```
+
+### Repeated leaf deletion pattern - LC 1325
+```
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def removeLeafNodes(self, root, target):
+        if root:
+            root.left = self.removeLeafNodes(root.left, target)
+            root.right = self.removeLeafNodes(root.right, target)
+            if root.val == target and root.left == None and root.right == None:
+                return None
+            return root
+```
+
+### Traverse fron one node of a BT to another node
+```
+LC2096
+```
+
+### LinkedList and BT 
+```
+Leetcode 1367
+```
+
 ### Morriss Traversal
 ```
 ```
@@ -411,3 +449,4 @@ LC112
 LC1339
 LC1361 - validate binary tree nodes
 LC2385 - do using DFS
+LC2096
