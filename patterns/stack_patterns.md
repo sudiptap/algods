@@ -260,3 +260,141 @@ class Solution:
 
 
 ```
+
+### LC 1047 - Remove all adjacent duplicates in a string
+```
+class Solution:
+    def removeDuplicates(self, s: str) -> str:
+        stack = []
+        for idx in range(len(s)):
+            if not stack or s[stack[-1]] != s[idx]:
+                stack.append(idx)
+            else:
+                while stack and s[stack[-1]] == s[idx]:
+                    stack.pop()
+        return "".join(s[c] for c in stack)
+
+LC 1209
+
+```
+
+### 1541. Minimum Insertions to Balance a Parentheses String
+```
+class Solution:
+    def minInsertions(self, s: str) -> int:
+        count = 0
+        s = s.replace('))', '}')
+        open_bracket_count = 0
+
+        for c in s:
+            if c == '(':
+                open_bracket_count += 1
+                
+            else:
+			
+                # For ) you need to add 1 char to get ))
+                if c == ')': 
+                    count += 1
+
+                # Matching ( for ) or ))
+                if open_bracket_count:
+                    open_bracket_count -= 1
+
+
+                # No Matching ( for ) or ))
+                # Need to insert ( to balance string
+                else:
+                    count += 1
+
+        return count + open_bracket_count * 2
+```
+
+### 20. Valid Parentheses
+```
+need a stack, ([)] is invalid
+```
+
+### LC 114 Flatten BT to LL
+```
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def flatten(self, root: Optional[TreeNode]) -> None:
+        """
+        Do not return anything, modify root in-place instead.
+        """
+        prev = None
+        def helper(root):
+            nonlocal prev
+            if not root:
+                return
+            
+            helper(root.right)
+            helper(root.left)
+
+            root.right = prev
+            root.left = None
+            prev = root
+        
+        helper(root)
+```
+
+### LC 234 - Palindrome LL
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        # use slow and fast pointers to find the middle
+        slow, fast = head, head
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+        # slow is pointing the mid node
+
+        # reverse the second half of the linkedlist
+        prev, cur = None, slow
+        while cur:
+            # hold the next pointer to cur
+            nxt = cur.next
+            # reverse the node pointers
+            cur.next = prev
+            # advance the prv
+            prev = cur
+            # adavcne the cur
+            cur = nxt
+        # prev will be pointing the first node of second half
+
+        # check for palindrome
+        left, right = head, prev
+        while right:
+            if left.val != right.val:
+                return False
+            left = left.next
+            right = right.next
+        return True
+```
+
+### LC 1944 - Number of visible people in a q
+```
+class Solution:
+    def canSeePersonsCount(self, heights: List[int]) -> List[int]:
+        n = len(heights)
+        ans = [0] * n
+        st = []
+        for i in range(n-1, -1, -1):
+            while st and heights[i] > st[-1]:
+                st.pop()
+                ans[i] += 1
+            if st:
+                ans[i] += 1
+            st.append(heights[i])
+        return ans
+```
