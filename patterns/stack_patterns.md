@@ -91,6 +91,38 @@ class Solution:
                 op = ch
             i += 1
         return res
+
+LC 772
+Basic Calculator III
+class Solution:
+    def calculate(self, s: str) -> int:
+        stack, sign, num = [], '+', 0
+        for i, c in enumerate(s + '+'):
+            if c.isdigit():
+                num = num * 10 + ord(c) - ord('0')
+            elif c == '(':
+                stack.append(sign)
+                stack.append('(')
+                sign = '+'
+            elif c in '+-*/)':
+                if sign == '+':
+                    stack.append(num)
+                elif sign == '-':
+                    stack.append(-num)
+                elif sign == '*':
+                    stack.append(stack.pop() * num)
+                elif sign == '/':
+                    stack.append(int(stack.pop() / num))
+                if c == ')':
+                    num, item = 0, stack.pop()
+                    while item != '(':
+                        num += item
+                        item = stack.pop()
+                    sign = stack.pop()
+                else:
+                    sign, num = c, 0
+        return sum(stack)
+        
 ```
 
 ### Next smaller to left and right
@@ -397,4 +429,50 @@ class Solution:
                 ans[i] += 1
             st.append(heights[i])
         return ans
+```
+
+### LC 42 - Trapping rain water
+```
+class Solution:
+    
+    def trap(self, height: List[int]) -> int:
+        l = 0
+        r = len(height)-1
+        maxl, maxr = height[l], height[r]
+        res = 0
+
+        while l < r:
+            if maxl <= maxr:
+                l += 1
+                res += max((maxl - height[l]), 0)
+                maxl = max(maxl, height[l])
+            else:
+                r -= 1
+                res += max((maxr - height[r]), 0)
+                maxr = max(maxr, height[r])
+        return res
+```
+
+### LC 2281
+```
+very hard
+```
+
+### LC 84
+```
+class Solution:
+    def largestRectangleArea(self, heights: List[int]) -> int:
+        max_area = 0
+        stack = [] # (index, height)
+
+        for i, h in enumerate(heights):
+            start = i
+            while stack and stack[-1][1] > h:
+                index, height = stack.pop()
+                max_area = max(max_area, (i - index)*height)
+                start = index
+            stack.append((start, h))
+        for i, h in stack:
+            max_area = max(max_area, (len(heights)-i)*h)
+        return max_area
 ```
