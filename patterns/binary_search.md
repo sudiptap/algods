@@ -143,7 +143,16 @@ def singleNonDuplicate(nums):
 ```
 #### kth missing number
 ```
-
+class Solution:
+    def findKthPositive(self, arr: List[int], k: int) -> int:
+        left, right = 0, len(arr)-1
+        while left <= right:
+            mid = (right + left) // 2
+            if arr[mid] - mid - 1 < k:
+                left = mid + 1
+            else:
+                right = mid - 1
+        return left + k
 ```
 
 #### Binary search on the ans
@@ -166,4 +175,37 @@ LC 1608
 ```
 LC-2968
 LC -1608
+```
+### Missing element in sorted array
+```
+LC 1060
+# when nums = [4,7,9,10], there is a missed_element_array = [0, 2, 3, 3],
+# So before nums[i] = 7, there exist 2 missed element(5,6), before nums[i] = 9, there exist 3 missed element(5,6,8).
+# Therefore the equation we use to count the missed number should be num[i] - num[0] - i
+
+# First, we should find the first num[i] that have greater missing element than k by using binary search.
+# In nums = [4,7,9,10], if k = 1, then num[i] should be 7.
+
+# so the k number is between range of 4 - 7,
+# num[k] = nums[i-1] + (k - (nums[i-1] - nums[0] - (i-1)))
+# 4 + k - (missed element for 4)
+# we can get 4 + (1 - 0) = 5
+
+class Solution:
+	def missingElement(self, nums: List[int], k: int) -> int:
+		
+		l = 0
+		r = len(nums)
+
+		while l < r:
+			mid = (l + r) // 2
+
+			if nums[mid] - nums[0] - mid < k:
+				l = mid + 1
+			else:
+				r = mid
+
+
+		return nums[l-1] + (k - (nums[l-1] - nums[0] - (l-1)))
+        
 ```
