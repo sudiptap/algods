@@ -1,3 +1,6 @@
+## Binary Search
+### Pattern Missing element in sorted array
+
 ## Heap
 
 ## Prefix Sum

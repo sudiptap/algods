@@ -20,7 +20,7 @@ def binary_search(nums, target):
 ### find upper/lower bound
 #### upper
 ```
-def upper_bound(nums,, target):
+def upper_bound(nums, target):
     low, high = 0, len(nums)-1
     ans = -1
     while low <= high:
@@ -141,7 +141,7 @@ def singleNonDuplicate(nums):
                 low = mid+1
         return nums[high]
 ```
-#### kth missing number
+#### kth missing positive number LC 1539
 ```
 class Solution:
     def findKthPositive(self, arr: List[int], k: int) -> int:
@@ -164,6 +164,36 @@ LC-2968 (LC hard practice)
 ```
 #### Median of two sorted arrays
 ```
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        A, B = nums1, nums2
+        total = len(nums1) + len(nums2)
+        half = total // 2
+        if len(B) < len(A):
+            A, B = B, A
+        low, high = 0, len(A) - 1
+        while True:
+            i = (low + high) // 2
+            j = half - i - 2
+            
+            a_left = A[i] if i>=0 else -sys.maxsize
+            a_right = A[i+1] if (i+1) < len(A) else sys.maxsize
+            
+            b_left = B[j] if j>=0 else -sys.maxsize
+            b_right = B[j+1] if (j+1) < len(B) else sys.maxsize
+            
+            # valid partition
+            if a_left <= b_right and b_left <= a_right:
+                # odd
+                if total % 2:
+                    return min(a_right, b_right)
+                # even
+                else:
+                    return (max(a_left, b_left) + min(a_right, b_right)) / 2
+            elif a_left > b_right:
+                high = i - 1
+            else:
+                low = i + 1
 ```
 
 ####  Nexted binary search 
@@ -209,3 +239,81 @@ class Solution:
 		return nums[l-1] + (k - (nums[l-1] - nums[0] - (l-1)))
         
 ```
+### 658. Find K Closest Elements
+```
+Tirck is to use binary search to search for a valid window 
+```
+
+### 378 Kth smallest element in sorted matrix
+```
+class Solution:  # 160 ms, faster than 93.06%
+    def kthSmallest(self, matrix, k):
+        m, n = len(matrix), len(matrix[0])  # For general, the matrix need not be a square
+
+        def countLessOrEqual(x):
+            cnt = 0
+            c = n - 1  # start with the rightmost column
+            for r in range(m):
+                while c >= 0 and matrix[r][c] > x: c -= 1  # decrease column until matrix[r][c] <= x
+                cnt += (c + 1)
+            return cnt
+
+        left, right = matrix[0][0], matrix[-1][-1]
+        ans = -1
+        while left <= right:
+            mid = (left + right) // 2
+            if countLessOrEqual(mid) >= k:
+                ans = mid
+                right = mid - 1  # try to looking for a smaller value in the left side
+            else:
+                left = mid + 1  # try to looking for a bigger value in the right side
+
+        return ans
+```
+
+### 1439 - very imp
+```
+Logic - this is a heap question, Try the following way, get a min heap that stores [sum, indices] but ordered by the sum. smallest sum would be all 0th elements. then increase index of each array by 1 while keeping other indices of other arrays fixed and calculate the sum again, for these newly calculated sum push them into the heap. Do this till we find k elements.
+```
+
+### Sqrt x 69
+```
+```
+### 1428 left column with atleast a one
+```
+class Solution:
+    def leftMostColumnWithOne(self, binaryMatrix: 'BinaryMatrix') -> int:
+        num_rows, num_cols = binaryMatrix.dimensions()
+        row = 0
+        col = num_cols-1
+        while row <= num_rows-1 and col >= 0:
+            if binaryMatrix.get(row, col) == 1:
+                col -= 1
+            else:
+                row +=1
+        if col == num_cols-1:
+            return -1
+        else:
+            return col+1
+```
+
+### Search in 2D matrix
+```
+Double binary search
+```
+
+### LC1838
+```
+https://www.youtube.com/watch?v=vgBrQ0NM5vE&t=613s
+https://www.youtube.com/watch?v=iOqH_JnXIOQ 
+```
+
+## Practice
+1891
+1213 - asked me in meta interview
+1439
+2468
+633
+1428
+3186
+1838 - sliding winodw 
