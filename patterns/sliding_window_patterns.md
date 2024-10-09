@@ -2,6 +2,7 @@
 ### Pattern 1 - LC 76 Minimum Window Substring
 ```
 ```
+
 ### Pattern 2 - LC 219
 ```
 ```
@@ -37,4 +38,30 @@ step 4: if the window is of length k then add dq[0] to result as we always keep 
 
 ### Pattern 9 - LC 560, 930
 ```
+```
+
+## ------ Meta Tagged ------
+### Standard Sliding window LC 1004
+```
+class Solution:
+    def longestOnes(self, nums: List[int], k: int) -> int:
+        left, right = 0, 0
+        zeros = 0
+        mx = 0
+
+        while right < len(nums):
+            if nums[right] == 0:
+                zeros += 1
+            while zeros > k:
+                if nums[left] == 0:
+                    zeros -= 1
+                left += 1
+            mx = max(mx, right - left + 1)
+            right += 1
+        return mx
+        
+```
+### Sliding window median
+```
+
 ```
