@@ -254,7 +254,7 @@ Easy *
 Med.
 
 680. Valid Palindrome II
-Easy
+Easy *
 
 215. Kth Largest Element in an Array
 Med.
@@ -303,6 +303,8 @@ Med.
 
 543. Diameter of Binary Tree
 Easy
+
+## Oct 10
 
 125. Valid Palindrome
 Easy
