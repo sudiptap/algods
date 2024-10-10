@@ -260,13 +260,13 @@ Easy *
 Med.
 
 1650. Lowest Common Ancestor of a Binary Tree III
-Med.
+Med. *
 
 528. Random Pick with Weight
-Med.
+Med. *
 
 227. Basic Calculator II
-Med.
+Med. **
 
 88. Merge Sorted Array
 Easy
