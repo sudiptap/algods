@@ -272,19 +272,19 @@ Med. **
 Easy
 
 339. Nested List Weight Sum
-Med.
+Med.*
 
 71. Simplify Path
-Med.
+Med.*
 
 236. Lowest Common Ancestor of a Binary Tree
 Med.
 
 1570. Dot Product of Two Sparse Vectors
-Med.
+Med.*
 
 560. Subarray Sum Equals K
-Med.
+Med. **
 
 50. Pow(x, n)
 Med.
@@ -296,13 +296,13 @@ Med.
 Easy
 
 1762. Buildings With an Ocean View
-Med.
+Med. **
 
 56. Merge Intervals
-Med.
+Med. *
 
 543. Diameter of Binary Tree
-Easy
+Easy *
 
 ## Oct 10
 
