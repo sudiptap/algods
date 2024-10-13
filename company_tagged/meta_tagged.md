@@ -316,58 +316,60 @@ Easy
 Easy
 
 15. 3Sum
-Med.
+Med.**
 
 973. K Closest Points to Origin
 Med.
 
 1091. Shortest Path in Binary Matrix
-Med.
+Med. *
 
 138. Copy List with Random Pointer
-Med.
+Med. **
 
 31. Next Permutation
-Med.
+Med. **
 
 146. LRU Cache
-Med.
+Med. *
 
 347. Top K Frequent Elements
 Med.
 
 199. Binary Tree Right Side View
-Med.
+Med.*
 
 791. Custom Sort String
 Med.
 
 921. Minimum Add to Make Parentheses Valid
-Med.
+Med. **
 
 200. Number of Islands
 Med.
 
 346. Moving Average from Data Stream
-Easy
+Easy **
 
 23. Merge k Sorted Lists
-Hard
+Hard *
 
 17. Letter Combinations of a Phone Number
 Med.
 
 827. Making A Large Island
-Hard
+Hard *
 
 1004. Max Consecutive Ones III
-Med.
+Med. *
 
 34. Find First and Last Position of Element in Sorted Array
 Med.
 
+## Oct 11
+
 670. Maximum Swap
-Med.
+Med. **
 
 14. Longest Common Prefix
 Easy
@@ -376,43 +378,43 @@ Easy
 Easy
 
 133. Clone Graph
-Med.
+Med. **
 
 129. Sum Root to Leaf Numbers
 Med.
 
 426. Convert Binary Search Tree to Sorted Doubly Linked List
-Med.
+Med. **
 
 986. Interval List Intersections
-Med.
+Med. *
 
 65. Valid Number
-Hard
+Hard **
 
 498. Diagonal Traverse
-Med.
+Med. *
 
 523. Continuous Subarray Sum
-Med.
+Med. **
 
 1539. Kth Missing Positive Number
-Easy
+Easy **
 
 2. Add Two Numbers
 Med.
 
 398. Random Pick Index
-Med.
+Med. *
 
 987. Vertical Order Traversal of a Binary Tree
-Hard
+Hard *
 
 5. Longest Palindromic Substring
-Med.
+Med. *
 
 721. Accounts Merge
-Med.
+Med. **
 
 708. Insert into a Sorted Circular Linked List
 Med.
@@ -421,19 +423,19 @@ Med.
 Med.
 
 4. Median of Two Sorted Arrays
-Hard
+Hard **
 
 415. Add Strings
 Easy
 
 636. Exclusive Time of Functions
-Med.
+Med. **
 
 691. Stickers to Spell Word
-Hard
+Hard **
 
 2667. Create Hello World Function
-Easy
+Easy ***
 
 78. Subsets
 Med.
@@ -448,22 +450,19 @@ Easy
 Med.
 
 42. Trapping Rain Water
-Hard
+Hard **
 
 76. Minimum Window Substring
-Hard
+Hard *
 
 249. Group Shifted Strings
-Med.
-
-1757. Recyclable and Low Fat Products
-Easy
+Med. 
 
 766. Toeplitz Matrix
 Easy
 
 1868. Product of Two Run-Length Encoded Arrays
-Med.
+Med. *
 
 70. Climbing Stairs
 Easy
@@ -472,19 +471,20 @@ Easy
 Easy
 
 282. Expression Add Operators
-Hard
+Hard **
 
 953. Verifying an Alien Dictionary
-Easy
+Easy *
 
 7. Reverse Integer
 Med.
 
 525. Contiguous Array
-Med.
+Med. * 
+Pattern: hasmap , store count of excess 1s as key and index where you observe it as value
 
 647. Palindromic Substrings
-Med.
+Med. **
 
 1768. Merge Strings Alternately
 Easy
@@ -493,7 +493,8 @@ Easy
 Easy
 
 38. Count and Say
-Med.
+Med. **
+source: https://www.youtube.com/watch?v=5uJitfSM3vk
 
 53. Maximum Subarray
 Med.
@@ -608,6 +609,10 @@ Med.
 
 1424. Diagonal Traverse II
 Med.
+
+
+## Oct 15
+
 
 10. Regular Expression Matching
 Hard
