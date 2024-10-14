@@ -500,10 +500,10 @@ source: https://www.youtube.com/watch?v=5uJitfSM3vk
 Med.
 
 127. Word Ladder
-Hard
+Hard *
 
 207. Course Schedule
-Med.
+Med. * Topological Sorting
 
 658. Find K Closest Elements
 Med.
@@ -512,16 +512,16 @@ Med.
 Easy
 
 13. Roman to Integer
-Easy
+Easy **
 
 26. Remove Duplicates from Sorted Array
-Easy
+Easy *
 
 48. Rotate Image
 Med.
 
 75. Sort Colors
-Med.
+Med. **
 
 124. Binary Tree Maximum Path Sum
 Hard
@@ -530,19 +530,19 @@ Hard
 Med.
 
 140. Word Break II
-Hard
+Hard *
 
 238. Product of Array Except Self
-Med.
+Med. *
 
 273. Integer to English Words
-Hard
+Hard ***
 
 1216. Valid Palindrome III
-Hard
+Hard, practice required
 
 8. String to Integer (atoi)
-Med.
+Med. **
 
 16. 3Sum Closest
 Med.
@@ -554,13 +554,13 @@ Med.
 Easy
 
 118. Pascal's Triangle
-Easy
+Easy *
 
 153. Find Minimum in Rotated Sorted Array
 Med.
 
 163. Missing Ranges
-Easy
+Easy *
 
 173. Binary Search Tree Iterator
 Med.
@@ -569,34 +569,34 @@ Med.
 Med.
 
 253. Meeting Rooms II
-Med.
+Med. *
 
 480. Sliding Window Median
 Hard
 
 489. Robot Room Cleaner
-Hard
+Hard **
 
 43. Multiply Strings
-Med.
+Med. **
 
 102. Binary Tree Level Order Traversal
-Med.
+Med. 
 
 139. Word Break
-Med.
+Med. *
 
 169. Majority Element
-Easy
+Easy *
 
 219. Contains Duplicate II
-Easy
+Easy *
 
 278. First Bad Version
 Easy
 
 301. Remove Invalid Parentheses
-Hard
+Hard *
 
 394. Decode String
 Med.
@@ -605,10 +605,10 @@ Med.
 Easy
 
 1060. Missing Element in Sorted Array
-Med.
+Med. **
 
 1424. Diagonal Traverse II
-Med.
+Med. *
 
 
 ## Oct 15
