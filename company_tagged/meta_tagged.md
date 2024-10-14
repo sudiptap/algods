@@ -285,6 +285,19 @@ Med.*
 
 560. Subarray Sum Equals K
 Med. **
+```
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        d = {0: 1}
+        presum = 0
+        ans = 0
+        for idx, num in enumerate(nums):
+            presum += num
+            if (presum - k) in d:
+                ans += d[(presum - k)]
+            d[presum] = d.get(presum, 0) + 1
+        return ans
+```
 
 50. Pow(x, n)
 Med.
@@ -297,6 +310,7 @@ Easy
 
 1762. Buildings With an Ocean View
 Med. **
+Trick : we don't need stack for this, O(1) solution is possible
 
 56. Merge Intervals
 Med. *
@@ -317,6 +331,32 @@ Easy
 
 15. 3Sum
 Med.**
+```
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        if not nums or len(nums) == 0:
+            return res
+        
+        nums.sort()
+        
+        for firstIdx in range(len(nums)):
+            if firstIdx == 0 or (firstIdx > 0 and nums[firstIdx] != nums[firstIdx-1]):
+                target = 0 - nums[firstIdx]
+                low, high = firstIdx + 1, len(nums) - 1
+                while low < high:
+                    if nums[low] + nums[high] == target:
+                        res.append([nums[firstIdx], nums[low], nums[high]])
+                        while low < high and nums[high] == nums[high-1]:
+                            high -= 1
+                        high -= 1
+                    elif target > nums[low] + nums[high]:
+                        low += 1
+                    else:
+                        high -= 1
+        return res
+        
+```
 
 973. K Closest Points to Origin
 Med.
@@ -326,9 +366,65 @@ Med. *
 
 138. Copy List with Random Pointer
 Med. **
+```
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
+        self.val = int(x)
+        self.next = next
+        self.random = random
+"""
+
+class Solution:
+    def copyRandomList(self, head: 'Node') -> 'Node':
+        if not head:
+            return head
+        m = {}
+        curr = head
+        newDummyHead = Node(-1)
+        newCurr = newDummyHead
+        while curr:
+            #print(curr.val)
+            newCurr.next = Node(curr.val)
+            
+            m[curr] = newCurr.next
+            
+            newCurr = newCurr.next
+            curr = curr.next
+        
+        newCurr = newDummyHead.next
+        curr = head
+        
+        while curr:
+            #print(newCurr.val)
+            newCurr.random = m[curr.random] if curr.random else None
+            newCurr = newCurr.next
+            curr = curr.next
+        
+        return newDummyHead.next
+```
 
 31. Next Permutation
 Med. **
+```
+class Solution:
+    def nextPermutation(self, nums: List[int]) -> None:
+        i = j = len(nums)-1
+        while i > 0 and nums[i-1] >= nums[i]:
+            i -= 1
+        if i == 0:   # nums are in descending order
+            nums.reverse()
+            return 
+        k = i - 1    # find the last "ascending" position
+        while nums[j] <= nums[k]:
+            j -= 1
+        nums[k], nums[j] = nums[j], nums[k]  
+        l, r = k+1, len(nums)-1  # reverse the second part
+        while l < r:
+            nums[l], nums[r] = nums[r], nums[l]
+            l +=1 ; r -= 1
+```
 
 146. LRU Cache
 Med. *
@@ -344,12 +440,53 @@ Med.
 
 921. Minimum Add to Make Parentheses Valid
 Med. **
+```
+class Solution:
+    def minAddToMakeValid(self, s: str) -> int:
+        openp, closep = 0, 0
+        for ch in s:
+            if ch == "(":
+                openp += 1
+            elif ch == ")":
+                if openp > 0:
+                    openp -= 1
+                else:
+                    closep += 1
+        return openp + closep
+```
 
 200. Number of Islands
 Med.
 
 346. Moving Average from Data Stream
 Easy **
+```
+class MovingAverage:
+
+    def __init__(self, size: int):
+        self.dq = collections.deque()
+        self.size = size
+        self.sum = 0
+
+    def next(self, val: int) -> float:
+        if len(self.dq) < self.size:
+            # add more element
+            self.sum += val
+            self.dq.append(val)
+            return float(self.sum)/float(len(self.dq))
+        else: # if len(self.dq) == self.size
+            # popleft and then add 
+            popped_left = self.dq.popleft()
+            self.sum -= popped_left
+            self.sum += val
+            self.dq.append(val)
+            return float(self.sum)/float(self.size)
+
+
+# Your MovingAverage object will be instantiated and called as such:
+# obj = MovingAverage(size)
+# param_1 = obj.next(val)
+```
 
 23. Merge k Sorted Lists
 Hard *
