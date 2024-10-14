@@ -398,6 +398,8 @@ Med. *
 523. Continuous Subarray Sum
 Med. **
 
+Trick: Declare a map where remainder is key and value is the index where we see the remainder. 
+
 1539. Kth Missing Positive Number
 Easy **
 
@@ -414,7 +416,7 @@ Hard *
 Med. *
 
 721. Accounts Merge
-Med. **
+Med. ** (union find)
 
 708. Insert into a Sorted Circular Linked List
 Med.
@@ -429,11 +431,51 @@ Hard **
 Easy
 
 636. Exclusive Time of Functions
-Med. **
+Med. ** need practice
 
 691. Stickers to Spell Word
 Hard **
+```
+class Solution:
+    def minStickers(self, stickers: List[str], target: str) -> int:
+        target_map = Counter(target)
+        sticker_map = {}
+        for sticker in stickers:
+            sticker_map[sticker] = Counter(sticker)
+        
+        def stringify(map_):
+            return "".join(f"{key}:{value}" for key, value in map_.items())
 
+        q = deque()
+        q.append([target_map, 0])
+        visit = set()
+        
+        while q:
+            cur_target_map, cur_count = q.popleft()
+            #print(cur_target_map)
+            if len(cur_target_map) == 0:
+                return cur_count
+            if stringify(cur_target_map) in visit:
+                continue
+            str_ = stringify(cur_target_map)
+            #print(str_)
+            visit.add(str_)
+            # loop through each word and subtract
+            for sticker in stickers:
+                curr_sticker_map = sticker_map[sticker]
+                # check if this sticker will contribute at all to the target
+                leftover_map = (cur_target_map.copy() - curr_sticker_map)
+                for key in leftover_map:
+                    if leftover_map[key] <= 0:
+                        leftover_map.remove(key)
+                contrib = (leftover_map != cur_target_map.copy())
+                if contrib:
+                    #print(f"contrib is True")
+                    
+                    q.append([leftover_map.copy(), cur_count+1])
+        
+        return -1
+```
 2667. Create Hello World Function
 Easy ***
 
@@ -611,11 +653,11 @@ Med. **
 Med. *
 
 
-## Oct 15
+## Oct 13
 
 
 10. Regular Expression Matching
-Hard
+Hard **
 
 11. Container With Most Water
 Med.
@@ -673,6 +715,8 @@ Med.
 
 392. Is Subsequence
 Easy
+
+## Oct 14
 
 443. String Compression
 Med.
