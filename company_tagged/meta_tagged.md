@@ -370,6 +370,36 @@ Med.
 
 670. Maximum Swap
 Med. **
+```
+class Solution:
+    def maximumSwap(self, num: int) -> int:
+        s = list(str(num))
+        #print(s)
+        
+        digits = [-1 for _ in range(0, 10)]
+        #print(digits)
+        
+        for index, ch in enumerate(s):
+            digit = int(ch)
+            digits[digit] = max(digits[digit], index)
+        
+        #print(digits)
+        
+        for index, ch in enumerate(s):
+            digit = int(ch)
+            for biggerDigit in range(9, digit, -1):
+                if digits[biggerDigit] > index:
+                    # print(f"biggerDigit = {biggerDigit}, biggerDigit Loc = {digits[biggerDigit]}, digit = {digit}, s[digit] = {s[digit]}")
+                    # swap
+                    s[index], s[digits[biggerDigit]] = s[digits[biggerDigit]], s[index]
+                    # return
+                    res = ""
+                    for i in s:
+                        res += i
+                    return int(res)
+        
+        return num
+```
 
 14. Longest Common Prefix
 Easy
@@ -379,6 +409,31 @@ Easy
 
 133. Clone Graph
 Med. **
+```
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val = 0, neighbors = None):
+        self.val = val
+        self.neighbors = neighbors if neighbors is not None else []
+"""
+
+class Solution:
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        oldtonew = {}
+        
+        def clone(node):
+            if node in oldtonew:
+                return oldtonew[node]
+            
+            copy = Node(node.val)
+            oldtonew[node] = copy
+            for nei in node.neighbors:
+                copy.neighbors.append(clone(nei))
+            return copy
+        return clone(node) if node else None
+        #return oldtonew[node]
+```
 
 129. Sum Root to Leaf Numbers
 Med.
@@ -391,6 +446,29 @@ Med. *
 
 65. Valid Number
 Hard **
+```
+class Solution:
+    def isNumber(self, s: str) -> bool:
+        seen_digit = seen_dec = seen_expo = False
+        for index, ch in enumerate(s):
+            if ch.isdigit():
+                seen_digit = True
+            elif ch in '+-':
+                if (index > 0 and s[index-1] not in "Ee"):
+                    return False
+            elif ch in 'Ee':
+                if seen_expo or not seen_digit:
+                    return False
+                seen_expo = True
+                seen_digit = False
+            elif ch == ".":
+                if seen_dec or seen_expo:
+                    return False
+                seen_dec = True
+            else:
+                return False
+        return seen_digit
+```
 
 498. Diagonal Traverse
 Med. *
@@ -400,8 +478,37 @@ Med. **
 
 Trick: Declare a map where remainder is key and value is the index where we see the remainder. 
 
+```
+class Solution:
+    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
+        d = {0: -1}
+        psum = 0
+        for idx in range(len(nums)):
+            psum += nums[idx]
+            rem = psum % k
+            if rem in d:
+                if idx - d[rem] >= 2:
+                    return True
+            else:
+                d[rem] = idx
+        
+        return False
+```
+
 1539. Kth Missing Positive Number
 Easy **
+```
+class Solution:
+    def findKthPositive(self, arr: List[int], k: int) -> int:
+        left, right = 0, len(arr)-1
+        while left <= right:
+            mid = (right + left) // 2
+            if arr[mid] - mid - 1 < k:
+                left = mid + 1
+            else:
+                right = mid - 1
+        return left + k
+```
 
 2. Add Two Numbers
 Med.
@@ -417,6 +524,51 @@ Med. *
 
 721. Accounts Merge
 Med. ** (union find)
+```
+class UnionFind:
+    def __init__(self, n):
+        self.par = [i for i in range(n)]
+        self.rank = [1] * n
+
+    def find(self, x):
+        while x != self.par[x]:
+            self.par[x] = self.par[self.par[x]]
+            x = self.par[x]
+        return x
+    
+    def union(self, x1, x2):
+        p1, p2 = self.find(x1), self.find(x2)
+        if p1 == p2:
+            return False
+        if self.rank[p1] > self.rank[p2]:
+            self.par[p2] = p1
+            self.rank[p1] += self.rank[p2]
+        else:
+            self.par[p1] = p2
+            self.rank[p2] += self.rank[p1]
+        return True
+
+class Solution:
+
+    def accountsMerge(self, accounts: List[List[str]]) -> List[List[str]]:
+        uf = UnionFind(len(accounts))
+        emailToAcc = {}
+        for i, a in enumerate(accounts):
+            for e in a[1:]:
+                if e in emailToAcc:
+                    uf.union(i, emailToAcc[e])
+                else:
+                    emailToAcc[e] = i
+        emailGroup = defaultdict(list)
+        for e, i in emailToAcc.items():
+            leader = uf.find(i)
+            emailGroup[leader].append(e)
+        res = []
+        for i, emails in emailGroup.items():
+            name = accounts[i][0]
+            res.append([name] + sorted(emailGroup[i]))
+        return res
+```
 
 708. Insert into a Sorted Circular Linked List
 Med.
@@ -426,12 +578,72 @@ Med.
 
 4. Median of Two Sorted Arrays
 Hard **
+```
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        A, B = nums1, nums2
+        total = len(nums1) + len(nums2)
+        half = total // 2
+        if len(B) < len(A):
+            A, B = B, A
+        low, high = 0, len(A) - 1
+        while True:
+            i = (low + high) // 2
+            j = half - i - 2
+            
+            a_left = A[i] if i>=0 else -sys.maxsize
+            a_right = A[i+1] if (i+1) < len(A) else sys.maxsize
+            
+            b_left = B[j] if j>=0 else -sys.maxsize
+            b_right = B[j+1] if (j+1) < len(B) else sys.maxsize
+            
+            # valid partition
+            if a_left <= b_right and b_left <= a_right:
+                # odd
+                if total % 2:
+                    return min(a_right, b_right)
+                # even
+                else:
+                    return (max(a_left, b_left) + min(a_right, b_right)) / 2
+            elif a_left > b_right:
+                high = i - 1
+            else:
+                low = i + 1
+```
 
 415. Add Strings
 Easy
 
 636. Exclusive Time of Functions
 Med. ** need practice
+```
+class Solution:
+    def exclusiveTime(self, n: int, logs: List[str]) -> List[int]:
+        stack = []
+        res = [0] * n
+        if not logs or len(logs) == 0:
+            return res
+        firstRec = logs[0].split(":")
+        id, action, ts = int(firstRec[0]), firstRec[1], int(firstRec[2])
+        stack.append(id)
+        prev_ts = ts
+        for i in range(1, len(logs)):
+            id, action, ts = logs[i].split(":")
+            id = int(id)
+            ts = int(ts)
+            if action == "start":
+                if stack:
+                    prev_id = stack[-1]
+                res[prev_id] += ts - prev_ts
+                stack.append(id)
+                prev_ts = ts
+            else:
+                prev_id = stack[-1]
+                res[prev_id] += ts - prev_ts + 1
+                stack.pop()
+                prev_ts = ts + 1
+        return res
+```
 
 691. Stickers to Spell Word
 Hard **
