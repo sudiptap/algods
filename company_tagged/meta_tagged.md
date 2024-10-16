@@ -1009,13 +1009,13 @@ Med. *
 Hard **
 
 11. Container With Most Water
-Med.
+Med. **
 
 28. Find the Index of the First Occurrence in a String
-Easy
+Easy **
 
 44. Wildcard Matching
-Hard
+Hard **
 
 49. Group Anagrams
 Med.
@@ -1024,46 +1024,46 @@ Med.
 Med.
 
 72. Edit Distance
-Med.
+Med. *
 
 80. Remove Duplicates from Sorted Array II
-Med.
+Med. *
 
 84. Largest Rectangle in Histogram
-Hard
+Hard **
 
 105. Construct Binary Tree from Preorder and Inorder Traversal
 Med.
 
 116. Populating Next Right Pointers in Each Node
-Med.
+Med. *
 
 131. Palindrome Partitioning
-Med.
+Med. *
 
 136. Single Number
 Easy
 
 210. Course Schedule II
-Med.
+Med. *
 
 234. Palindrome Linked List
-Easy
+Easy *
 
 235. Lowest Common Ancestor of a Binary Search Tree
-Med.
+Med. 
 
 317. Shortest Distance from All Buildings
-Hard
+Hard *
 
 333. Largest BST Subtree
-Med.
+Med. 
 
 348. Design Tic-Tac-Toe
-Med.
+Med. *
 
 392. Is Subsequence
-Easy
+Easy *
 
 ## Oct 14
 
@@ -1083,25 +1083,25 @@ Med.
 Med.
 
 24. Swap Nodes in Pairs
-Med.
+Med. **
 
 27. Remove Element
 Easy
 
 37. Sudoku Solver
-Hard
+Hard *
 
 55. Jump Game
 Med.
 
 57. Insert Interval
-Med.
+Med. *
 
 67. Add Binary
-Easy
+Easy *
 
 79. Word Search
-Med.
+Med. *
 
 113. Path Sum II
 Med.
