@@ -1104,7 +1104,7 @@ Easy *
 Med. *
 
 113. Path Sum II
-Med.
+Med. *
 
 179. Largest Number
 Med.
@@ -1113,7 +1113,54 @@ Med.
 Easy
 
 269. Alien Dictionary
-Hard
+Hard **
+```
+class Solution:
+    def alienOrder(self, words: List[str]) -> str:
+        # first build the pmap
+        # map holding characters -> following characters learnt from the words
+        pmap = {c: set() for word in words for c in word}
+
+        # populate the pmap
+        for i in range(len(words)-1):
+            word1, word2 = words[i], words[i+1]
+            # app, apple ->valid
+            # apple, app -> invalid
+            minlen = min(len(word1), len(word2))
+            if len(word1) > len(word2) and word2 == word1[:minlen]:
+                return ""
+            # if not then, loop over lenght of minlen and check for characters mismatch
+            for j in range(minlen):
+                if word1[j] != word2[j]:
+                    pmap[word1[j]].add(word2[j])
+                    break
+        
+        # declare visit and cycle 
+        visit = set()
+        cycle = set()
+        res = []
+        # loop over pmap and see if you find a cycle
+        def dfs(key):
+            if key in cycle:
+                return True
+            if key in visit:
+                return False
+            cycle.add(key)
+            for nei in pmap[key]:
+                if dfs(nei):
+                    return True
+            cycle.remove(key)
+            visit.add(key)
+            res.append(key)
+            return False
+        
+        for key, value in pmap.items():
+            if dfs(key):
+                return ""
+        res.reverse()
+        return "".join(res)
+
+```
 
 286. Walls and Gates
 Med.
