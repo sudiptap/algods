@@ -1163,61 +1163,55 @@ class Solution:
 ```
 
 286. Walls and Gates
-Med.
+Med. *
 
 341. Flatten Nested List Iterator
-Med.
+Med. *
 
 350. Intersection of Two Arrays II
-Easy
+Easy *
 
 380. Insert Delete GetRandom O(1)
-Med.
+Med. *
 
 383. Ransom Note
 Easy
 
 494. Target Sum
-Med.
+Med. *
 
 539. Minimum Time Difference
-Med.
-
-584. Find Customer Referee
-Easy
+Med. **
 
 605. Can Place Flowers
 Easy
 
 617. Merge Two Binary Trees
-Easy
+Easy *
 
 739. Daily Temperatures
 Med.
 
 934. Shortest Bridge
-Med.
+Med. *
 
 977. Squares of a Sorted Array
 Easy
 
 1443. Minimum Time to Collect All Apples in a Tree
-Med.
+Med. * https://www.youtube.com/watch?v=Xdt5Z583auM
 
 1752. Check if Array Is Sorted and Rotated
-Easy
-
-2877. Create a DataFrame from List
-Easy
+Easy *
 
 22. Generate Parentheses
-Med.
+Med. *
 
 29. Divide Two Integers
-Med.
+Med. **
 
 54. Spiral Matrix
-Med.
+Med. *
 
 82. Remove Duplicates from Sorted List II
 Med.
@@ -1226,7 +1220,7 @@ Med.
 Easy
 
 206. Reverse Linked List
-Easy
+Easy **
 
 231. Power of Two
 Easy
@@ -1235,64 +1229,64 @@ Easy
 Easy
 
 332. Reconstruct Itinerary
-Hard
+Hard **
 
 378. Kth Smallest Element in a Sorted Matrix
-Med.
+Med. **
 
 410. Split Array Largest Sum
-Hard
+Hard **
 
 419. Battleships in a Board
-Med.
+Med. *
 
 493. Reverse Pairs
-Hard
+Hard **
 
 496. Next Greater Element I
 Easy
 
 540. Single Element in a Sorted Array
-Med.
+Med. *
 
 633. Sum of Square Numbers
-Med.
+Med. **
 
 695. Max Area of Island
-Med.
+Med. *
 
 725. Split Linked List in Parts
-Med.
+Med. *, practice LL
 
 704. Binary Search
 Easy
 
 622. Design Circular Queue
-Med.
+Med. *
 
 875. Koko Eating Bananas
-Med.
+Med. *
 
 958. Check Completeness of a Binary Tree
-Med.
+Med. **
 
 995. Minimum Number of K Consecutive Bit Flips
-Hard
+Hard **
 
 1122. Relative Sort Array
 Easy
 
 1778. Shortest Path in a Hidden Grid
-Med.
+Med. **
 
 18. 4Sum
-Med.
+Med. *
 
 25. Reverse Nodes in k-Group
-Hard
+Hard ** practice LL
 
 40. Combination Sum II
-Med.
+Med. *
 
 58. Length of Last Word
 Easy
@@ -1301,7 +1295,43 @@ Easy
 Easy
 
 73. Set Matrix Zeroes
-Med.
+Med. *
+```
+```
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        ROWS, COLS = len(matrix), len(matrix[0])
+        
+        row0 = False
+        
+        # traverse the matrix ans set the first row and col cells zero if
+        # matrix[row][col] is zero
+        
+        for row in range(ROWS):
+            for col in range(COLS):
+                if matrix[row][col] == 0:
+                    if row > 0:
+                        matrix[0][col] = 0
+                        matrix[row][0] = 0
+                    else:
+                        row0 = True
+        
+        for row in range(1, ROWS):
+            for col in range(1, COLS):
+                if matrix[0][col] == 0 or matrix[row][0] == 0:
+                    # means the entire column should be 0
+                    matrix[row][col] = 0
+        
+        if matrix[0][0] == 0:
+            for row in range(ROWS):
+                matrix[row][0] = 0
+            
+        if row0:
+            for col in range(COLS):
+                matrix[0][col] = 0
 
 74. Search a 2D Matrix
 Med.
