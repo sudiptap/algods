@@ -1337,76 +1337,97 @@ class Solution:
 Med.
 
 90. Subsets II
-Med.
+Med. *
 
 91. Decode Ways
-Med.
+Med. *
 
 103. Binary Tree Zigzag Level Order Traversal
-Med.
+Med. 
 
 114. Flatten Binary Tree to Linked List
-Med.
+Med. **
+```
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def flatten(self, root: Optional[TreeNode]) -> None:
+        """
+        Do not return anything, modify root in-place instead.
+        """
+        prev = None
+        def helper(root):
+            nonlocal prev
+            if not root:
+                return
+            
+            helper(root.right)
+            helper(root.left)
+
+            root.right = prev
+            root.left = None
+            prev = root
+        
+        helper(root)
+```
 
 142. Linked List Cycle II
-Med.
+Med. *
 
 145. Binary Tree Postorder Traversal
 Easy
 
 151. Reverse Words in a String
-Med.
+Med. *
 
 152. Maximum Product Subarray
-Med.
+Med. *
 
 155. Min Stack
 Med.
 
 161. One Edit Distance
-Med.
+Med. *
 
 168. Excel Sheet Column Title
-Easy
-
-181. Employees Earning More Than Their Managers
-Easy
+Easy **
 
 189. Rotate Array
-Med.
+Med. *
 
 191. Number of 1 Bits
-Easy
-
-197. Rising Temperature
-Easy
+Easy *
 
 208. Implement Trie (Prefix Tree)
-Med.
+Med. *
 
 221. Maximal Square
-Med.
+Med. *
 
 242. Valid Anagram
 Easy
 
 246. Strobogrammatic Number
-Easy
+Easy *
 
 257. Binary Tree Paths
 Easy
 
 304. Range Sum Query 2D - Immutable
-Med.
+Med. **
 
 322. Coin Change
-Med.
+Med. *
 
 328. Odd Even Linked List
-Med.
+Med. **
 
 330. Patching Array
-Hard
+Hard **
 
 387. First Unique Character in a String
 Easy
@@ -1415,37 +1436,37 @@ Easy
 Easy
 
 424. Longest Repeating Character Replacement
-Med.
+Med. *
 
 463. Island Perimeter
-Easy
+Easy *
 
 485. Max Consecutive Ones
 Easy
 
 490. The Maze
-Med.
+Med. *
 
 536. Construct Binary Tree from String
-Med.
+Med. *
 
 547. Number of Provinces
-Med.
+Med. *
 
 735. Asteroid Collision
 Med.
 
 778. Swim in Rising Water
-Hard
+Hard *
 
 796. Rotate String
-Easy
-
+Easy *
+ 
 857. Minimum Cost to Hire K Workers
-Hard
+Hard **
 
 885. Spiral Matrix III
-Med.
+Med. **
 
 896. Monotonic Array
 Easy
@@ -1454,43 +1475,38 @@ Easy
 Med.
 
 918. Maximum Sum Circular Subarray
-Med.
+Med. *
 
 930. Binary Subarrays With Sum
-Med.
+Med. **
 
 509. Fibonacci Number
 Easy
 
 983. Minimum Cost For Tickets
-Med.
+Med. *
 
 1013. Partition Array Into Three Parts With Equal Sum
-Easy
+Easy *
 
 1213. Intersection of Three Sorted Arrays
-Easy
+Easy **
 
-1070. Product Sales Analysis III
-Med.
+## Oct 17
+
+## practice as many questions possible below, will only mark **
 
 1148. Article Views I
 Easy
 
 1428. Leftmost Column with at Least a One
-Med.
+Med. **
 
 1344. Angle Between Hands of a Clock
-Med.
+Med. **
 
 1371. Find the Longest Substring Containing Vowels in Even Counts
-Med.
-
-1378. Replace Employee ID With The Unique Identifier
-Easy
-
-1661. Average Time of Process per Machine
-Easy
+Med. **
 
 2265. Count Nodes Equal to Average of Subtree
 Med.
@@ -1502,19 +1518,19 @@ Easy
 Easy
 
 3043. Find the Length of the Longest Common Prefix
-Med.
+Med. **
 
 36. Valid Sudoku
 Med.
 
 45. Jump Game II
-Med.
+Med. **
 
 46. Permutations
-Med.
+Med. **
 
 61. Rotate List
-Med.
+Med. **
 
 63. Unique Paths II
 Med.
@@ -1523,37 +1539,34 @@ Med.
 Med.
 
 117. Populating Next Right Pointers in Each Node II
-Med.
+Med. **
 
 135. Candy
-Hard
+Hard **
 
 143. Reorder List
-Med.
+Med. **
 
 148. Sort List
-Med.
+Med. **
 
 149. Max Points on a Line
-Hard
-
-185. Department Top Three Salaries
-Hard
+Hard **
 
 209. Minimum Size Subarray Sum
-Med.
+Med. **
 
 212. Word Search II
-Hard
+Hard **
 
 217. Contains Duplicate
-Easy
+Easy 
 
 224. Basic Calculator
-Hard
+Hard **
 
 226. Invert Binary Tree
-Easy
+Easy **
 
 237. Delete Node in a Linked List
 Med.
@@ -1562,19 +1575,19 @@ Med.
 Med.
 
 295. Find Median from Data Stream
-Hard
+Hard **
 
 297. Serialize and Deserialize Binary Tree
-Hard
+Hard **
 
 299. Bulls and Cows
-Med.
+Med. **
 
 329. Longest Increasing Path in a Matrix
-Hard
+Hard **
 
 334. Increasing Triplet Subsequence
-Med.
+Med. **
 
 337. House Robber III
 Med.
