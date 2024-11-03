@@ -459,7 +459,7 @@ class Solution:
 Med.
 
 346. Moving Average from Data Stream
-Easy **
+Easy ***
 ```
 class MovingAverage:
 
@@ -582,7 +582,7 @@ Med. **
 Med. *
 
 65. Valid Number
-Hard **
+Hard ***
 ```
 class Solution:
     def isNumber(self, s: str) -> bool:
@@ -714,7 +714,7 @@ Med.
 Med.
 
 4. Median of Two Sorted Arrays
-Hard **
+Hard ***
 ```
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
@@ -841,7 +841,7 @@ Easy
 Med.
 
 42. Trapping Rain Water
-Hard **
+Hard ***
 
 76. Minimum Window Substring
 Hard *
@@ -862,7 +862,7 @@ Easy
 Easy
 
 282. Expression Add Operators
-Hard **
+Hard ***
 
 953. Verifying an Alien Dictionary
 Easy *
