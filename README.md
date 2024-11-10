@@ -6,3 +6,4 @@ This repo is for capturing frequent patterns for algorithm and data structure in
 ### Backtracking
 ### union find
 ### Topological sort
+### LinkedList

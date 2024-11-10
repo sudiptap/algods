@@ -876,6 +876,7 @@ Pattern: hasmap , store count of excess 1s as key and index where you observe it
 
 647. Palindromic Substrings
 Med. **
+Blueprint: https://www.youtube.com/watch?v=tGAMyZxlwuA
 
 1768. Merge Strings Alternately
 Easy
@@ -969,7 +970,7 @@ Hard
 Hard **
 
 43. Multiply Strings
-Med. **
+Med. ***
 
 102. Binary Tree Level Order Traversal
 Med. 
@@ -1006,16 +1007,16 @@ Med. *
 
 
 10. Regular Expression Matching
-Hard **
+Hard ***
 
 11. Container With Most Water
-Med. **
+Med. *
 
 28. Find the Index of the First Occurrence in a String
 Easy **
 
 44. Wildcard Matching
-Hard **
+Hard ***
 
 49. Group Anagrams
 Med.
@@ -1030,7 +1031,7 @@ Med. *
 Med. *
 
 84. Largest Rectangle in Histogram
-Hard **
+Hard ***
 
 105. Construct Binary Tree from Preorder and Inorder Traversal
 Med.
@@ -1229,7 +1230,7 @@ Easy
 Easy
 
 332. Reconstruct Itinerary
-Hard **
+Hard ***
 
 378. Kth Smallest Element in a Sorted Matrix
 Med. **
@@ -1463,7 +1464,7 @@ Hard *
 Easy *
  
 857. Minimum Cost to Hire K Workers
-Hard **
+Hard ***
 
 885. Spiral Matrix III
 Med. **
@@ -2010,7 +2011,7 @@ Easy
 Med.
 
 711. Number of Distinct Islands II
-Hard
+Hard ****
 
 714. Best Time to Buy and Sell Stock with Transaction Fee
 Med.
