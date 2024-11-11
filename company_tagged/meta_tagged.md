@@ -1663,7 +1663,7 @@ Med.
 Easy
 
 959. Regions Cut By Slashes
-Med.
+Med. **
 
 998. Maximum Binary Tree II
 Med.
@@ -1690,7 +1690,34 @@ Easy
 Easy
 
 1353. Maximum Number of Events That Can Be Attended
-Med.
+Med. **
+```
+class Solution:
+    def maxEvents(self, events: List[List[int]]) -> int:
+        # sort by start time
+        events.sort()
+
+        days = max(end for start,end in events)
+        ans = 0
+
+        heap = []
+        eventId = 0
+        for day in range(1, days+1):
+            while events[eventId][0] == day:
+                # all events thats starts that day goes in the heap
+                heapq.heappush(heap, events[eventId][1])
+                eventId += 1
+            # remove all events from the heap that ended already
+            while heap:
+                if heap[0] < day:
+                    heapq.heappop(heap)
+            
+            # all the events in heap can be taken this day
+            # we will take the one on the top since this ends first
+            if heap:
+                ans += 1
+        return ans
+```
 
 1367. Linked List in Binary Tree
 Med.
@@ -1930,7 +1957,7 @@ Med.
 Hard
 
 435. Non-overlapping Intervals
-Med.
+Med. **
 
 455. Assign Cookies
 Easy
@@ -2346,3 +2373,33 @@ Med.
 3164. Find the Number of Good Pairs II
 Med.
 
+## Greedy/ Divide and Conquer
+1382. Balance an Binary Search Tree
+```
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def balanceBST(self, root: TreeNode) -> TreeNode:
+        nodes = []
+        
+        def in_order_traverse(root):
+            if root is None:return
+            in_order_traverse(root.left)
+            nodes.append(root)
+            in_order_traverse(root.right)
+        
+        def build_balanced_tree(left, right):
+            if left>right:return None
+            mid = (left+right)//2
+            root = nodes[mid]
+            root.left = build_balanced_tree(left, mid-1)
+            root.right = build_balanced_tree(mid+1, right)
+            return root
+        in_order_traverse(root)
+        return build_balanced_tree(0, len(nodes)-1)
+        
+```
