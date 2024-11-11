@@ -131,3 +131,33 @@ class Solution:
 LC 502
 
 ```
+
+### Maximum Number of Events That Ca be Attended
+```
+LC 1353
+class Solution:
+    def maxEvents(self, events: List[List[int]]) -> int:
+        # sort by start time
+        events.sort()
+
+        days = max(end for start,end in events)
+        ans = 0
+
+        heap = []
+        eventId = 0
+        for day in range(1, days+1):
+            while events[eventId][0] == day:
+                # all events thats starts that day goes in the heap
+                heapq.heappush(heap, events[eventId][1])
+                eventId += 1
+            # remove all events from the heap that ended already
+            while heap:
+                if heap[0] < day:
+                    heapq.heappop(heap)
+            
+            # all the events in heap can be taken this day
+            # we will take the one on the top since this ends first
+            if heap:
+                ans += 1
+        return ans
+```
