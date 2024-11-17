@@ -132,7 +132,7 @@ LC 502
 
 ```
 
-### Maximum Number of Events That Ca be Attended
+### Maximum Number of Events That Can be Attended
 ```
 LC 1353
 class Solution:

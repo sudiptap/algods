@@ -1497,17 +1497,18 @@ Easy **
 
 ## practice as many questions possible below, will only mark **
 
-1148. Article Views I
-Easy
 
 1428. Leftmost Column with at Least a One
-Med. **
+Med. *
 
 1344. Angle Between Hands of a Clock
-Med. **
+Med. ***
 
 1371. Find the Longest Substring Containing Vowels in Even Counts
-Med. **
+Med. ***
+```
+Pattern: 
+```
 
 2265. Count Nodes Equal to Average of Subtree
 Med.
@@ -1520,6 +1521,10 @@ Easy
 
 3043. Find the Length of the Longest Common Prefix
 Med. **
+```
+Trie Pattern
+
+```
 
 36. Valid Sudoku
 Med.

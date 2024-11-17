@@ -3,7 +3,8 @@ This repo is for capturing frequent patterns for algorithm and data structure in
 
 
 ## ToDo:
+### Trie
 ### Backtracking
-### union find
-### Topological sort
+### union find - done
+### Topological sort - done
 ### LinkedList
