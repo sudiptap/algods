@@ -1531,6 +1531,12 @@ Med.
 
 45. Jump Game II
 Med. **
+```
+Pattern : if I am at index i, I wat to track the range of indices I can reach from here, e.g.
+[2,3,1,1,4] when i = 0 we can reach [1,2] indices with step 1, then 1+1, 1+2, 1+3 ={2,3,4} as 1,2,3 are in the range of 
+nums[1] == 3, for i=2, 2+nums[2] = 3, hence [2,4] in step 2, at this point we identify we reached index 4 hence answer is 2 steps.
+so, keep track of the range of indices we can reach after everystep.
+```
 
 46. Permutations
 Med. **
@@ -1545,7 +1551,7 @@ Med.
 Med.
 
 117. Populating Next Right Pointers in Each Node II
-Med. **
+Med. *** Try the O(1) space solution 
 
 135. Candy
 Hard **
@@ -1558,12 +1564,66 @@ Med. **
 
 149. Max Points on a Line
 Hard **
+```
+use a hasmap to store slope x2-x1/y2-y1 as key or points p1 = (x1,y1) and p2 = (x2,y2) and number of points
+on the slope as value.
+```
 
 209. Minimum Size Subarray Sum
 Med. **
 
 212. Word Search II
-Hard **
+Hard *** 
+```
+super imporatnat to learn Prefix Tree, DFS
+
+class Trie:
+    def __init__(self):
+        self.children = {}
+        self.isWord = False
+    
+    def insert(self, word):
+        cur = self
+        for ch in word:
+            if ch not in cur.children:
+                cur.children[ch] = Trie()
+            cur = cur.children[ch]
+        cur.isWord = True
+
+
+class Solution:
+    def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+        root = Trie()
+        for word in words:
+            root.insert(word)
+        res = set()
+        visit = set()
+        ROWS, COLS = len(board), len(board[0])
+
+        def dfs(row, col, word, node):
+            # check if row, col should be visited
+            if row < 0 or col < 0 or row == ROWS or col == COLS or (row, col) in visit or (board[row][col] not in node.children):
+                return
+            
+            visit.add((row, col))
+            ch = board[row][col]
+            node = node.children[ch]
+            word += ch
+            if node.isWord:
+                res.add(word)
+            
+            dfs(row-1, col, node, word)
+            dfs(row+1, col, node, word)
+            dfs(row, col+1, node, word)
+            dfs(row, col-1, node, word)
+
+            visit.remove((row, col))
+        
+        for row in range(ROWS):
+            for col in range(COLS):
+                dfs(row, col, "", root)
+        return list(res)
+```
 
 217. Contains Duplicate
 Easy 
@@ -1572,7 +1632,7 @@ Easy
 Hard **
 
 226. Invert Binary Tree
-Easy **
+Easy *
 
 237. Delete Node in a Linked List
 Med.
@@ -1594,7 +1654,7 @@ Hard **
 
 334. Increasing Triplet Subsequence
 Med. **
-
+--- Nov 17
 337. House Robber III
 Med.
 
