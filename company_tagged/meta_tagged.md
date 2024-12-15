@@ -1665,10 +1665,10 @@ Easy
 Med.
 
 386. Lexicographical Numbers
-Med.
+Med. **
 
 399. Evaluate Division
-Med.
+Med. *
 
 409. Longest Palindrome
 Easy
@@ -1677,43 +1677,60 @@ Easy
 Med.
 
 437. Path Sum III
-Med.
+Med. **
+```
+pattern
+map[cur_sum] -> count
+res += map[curr_sum - target_sum]
+return res
+```
 
 438. Find All Anagrams in a String
 Med.
 
 450. Delete Node in a BST
-Med.
+Med. **
 
 461. Hamming Distance
-Easy
+Easy **
 
 477. Total Hamming Distance
-Med.
+Med. **
 
 535. Encode and Decode TinyURL
 Med.
 
 554. Brick Wall
-Med.
+Med. **
 
 556. Next Greater Element III
 Med.
 
-597. Friend Requests I: Overall Acceptance Rate
-Easy
-
 621. Task Scheduler
-Med.
+Med. *
 
 643. Maximum Average Subarray I
 Easy
 
 673. Number of Longest Increasing Subsequence
-Med.
+Med. **
+```
+class Solution:
+    def findNumberOfLIS(self, nums: List[int]) -> int:
+        if not nums: return 0
+        n = len(nums)
+        m, dp, cnt = 0, [1] * n, [1] * n
+        for i in range(n):
+            for j in range(i):
+                if nums[j] < nums[i]:
+                    if dp[i] < dp[j]+1: dp[i], cnt[i] = dp[j]+1, cnt[j]
+                    elif dp[i] == dp[j]+1: cnt[i] += cnt[j]
+            m = max(m, dp[i])                        
+        return sum(c for l, c in zip(dp, cnt) if l == m)
+```
 
 689. Maximum Sum of 3 Non-Overlapping Subarrays
-Hard
+Hard ***
 
 785. Is Graph Bipartite?
 Med.
@@ -1722,36 +1739,24 @@ Med.
 Med.
 
 865. Smallest Subtree with all the Deepest Nodes
-Med.
+Med. **
 
 876. Middle of the Linked List
 Easy
 
 959. Regions Cut By Slashes
-Med. **
+Med. ***
 
 998. Maximum Binary Tree II
-Med.
-
-1075. Project Employees I
-Easy
+Med. *
 
 1108. Defanging an IP Address
-Easy
-
-1141. User Activity for the Past 30 Days I
 Easy
 
 1146. Snapshot Array
 Med.
 
 1331. Rank Transform of an Array
-Easy
-
-1211. Queries Quality and Percentage
-Easy
-
-1251. Average Selling Price
 Easy
 
 1353. Maximum Number of Events That Can Be Attended
@@ -1785,19 +1790,19 @@ class Solution:
 ```
 
 1367. Linked List in Binary Tree
-Med.
+Med. **
 
 1460. Make Two Arrays Equal by Reversing Subarrays
 Easy
 
 1590. Make Sum Divisible by P
-Med.
+Med. ** LC 560 , LC 974, LC 1074 same pattern
 
 1586. Binary Search Tree Iterator II
-Med.
+Med. **
 
 1608. Special Array With X Elements Greater Than or Equal X
-Easy
+Easy **
 
 1609. Even Odd Tree
 Med.
@@ -1812,10 +1817,10 @@ Easy
 Easy
 
 1810. Minimum Path Cost in a Hidden Grid
-Med.
+Med. **
 
 1838. Frequency of the Most Frequent Element
-Med.
+Med. ***
 
 1826. Faulty Sensor
 Easy
@@ -1824,7 +1829,8 @@ Easy
 Easy
 
 2104. Sum of Subarray Ranges
-Med.
+Med. **
+Similar pattern : sum of subarray minimum
 
 2210. Count Hills and Valleys in an Array
 Easy
