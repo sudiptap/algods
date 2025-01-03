@@ -1,25 +1,11 @@
-# find upper and lower bound
-import heapq
+"""
+2,3,5
 
-data = [10, 2, 20, 4, -80, 70]
+4,6,10,9,15,25
 
-class MaxHeapNode:
-    def __init__(self, data):
-        self.data = data
-    
-    def __gt__(self, other):
-        return self.data < other.data
+8,12,20,18,30,50,18,27,45,75,125
 
-    # def __repr__(self):
-    #     return self.data
-    
-    # def __str__(self):
-    #     return self.data
+16,24,40,
 
-h = []
-for d in data:
-    heapq.heappush(h, MaxHeapNode(d))
-
-while h:
-    ele = heapq.heappop(h)
-    print(ele.data)
+"""
+14

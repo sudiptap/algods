@@ -266,7 +266,7 @@ Med. *
 Med. *
 
 227. Basic Calculator II
-Med. **
+Med. ** do a dry run
 
 88. Merge Sorted Array
 Easy
@@ -406,7 +406,7 @@ class Solution:
 ```
 
 31. Next Permutation
-Med. **
+Med. ** do a dry run
 ```
 class Solution:
     def nextPermutation(self, nums: List[int]) -> None:
@@ -439,7 +439,7 @@ Med.*
 Med.
 
 921. Minimum Add to Make Parentheses Valid
-Med. **
+Med. ***
 ```
 class Solution:
     def minAddToMakeValid(self, s: str) -> int:
@@ -576,7 +576,7 @@ class Solution:
 Med.
 
 426. Convert Binary Search Tree to Sorted Doubly Linked List
-Med. **
+Med. ***
 
 986. Interval List Intersections
 Med. *
@@ -633,7 +633,7 @@ class Solution:
 ```
 
 1539. Kth Missing Positive Number
-Easy **
+Easy ***
 ```
 class Solution:
     def findKthPositive(self, arr: List[int], k: int) -> int:
@@ -660,7 +660,7 @@ Hard *
 Med. *
 
 721. Accounts Merge
-Med. ** (union find)
+Med. *** (union find)
 ```
 class UnionFind:
     def __init__(self, n):
@@ -752,7 +752,7 @@ class Solution:
 Easy
 
 636. Exclusive Time of Functions
-Med. ** need practice
+Med. *** need practice
 ```
 class Solution:
     def exclusiveTime(self, n: int, logs: List[str]) -> List[int]:
@@ -841,7 +841,7 @@ Easy
 Med.
 
 42. Trapping Rain Water
-Hard ***
+Hard **
 
 76. Minimum Window Substring
 Hard *
@@ -862,7 +862,7 @@ Easy
 Easy
 
 282. Expression Add Operators
-Hard ***
+Hard *** 
 
 953. Verifying an Alien Dictionary
 Easy *
@@ -875,7 +875,7 @@ Med. *
 Pattern: hasmap , store count of excess 1s as key and index where you observe it as value
 
 647. Palindromic Substrings
-Med. **
+Med. ***
 Blueprint: https://www.youtube.com/watch?v=tGAMyZxlwuA
 
 1768. Merge Strings Alternately
@@ -885,7 +885,7 @@ Easy
 Easy
 
 38. Count and Say
-Med. **
+Med. ***
 source: https://www.youtube.com/watch?v=5uJitfSM3vk
 
 53. Maximum Subarray
@@ -914,6 +914,7 @@ Med.
 
 75. Sort Colors
 Med. **
+use counting sort TC O(n+k), k being the number of colors here
 
 124. Binary Tree Maximum Path Sum
 Hard
@@ -928,7 +929,7 @@ Hard *
 Med. *
 
 273. Integer to English Words
-Hard ***
+Hard *** - I hate this question
 
 1216. Valid Palindrome III
 Hard, practice required
@@ -967,10 +968,10 @@ Med. *
 Hard
 
 489. Robot Room Cleaner
-Hard **
+Hard ***
 
 43. Multiply Strings
-Med. ***
+Med. *** - I hate this question
 
 102. Binary Tree Level Order Traversal
 Med. 
@@ -997,7 +998,7 @@ Med.
 Easy
 
 1060. Missing Element in Sorted Array
-Med. **
+Med. ***
 
 1424. Diagonal Traverse II
 Med. *
@@ -1233,7 +1234,7 @@ Easy
 Hard ***
 
 378. Kth Smallest Element in a Sorted Matrix
-Med. **
+Med. ***
 
 410. Split Array Largest Sum
 Hard **
@@ -1269,16 +1270,17 @@ Med. *
 Med. *
 
 958. Check Completeness of a Binary Tree
-Med. **
+Med. ***
 
 995. Minimum Number of K Consecutive Bit Flips
-Hard **
+Hard ** I hate bitwise
 
 1122. Relative Sort Array
 Easy
 
 1778. Shortest Path in a Hidden Grid
 Med. **
+Use DFS to identify the target and the grid, then bfs to identify the shortest path
 
 18. 4Sum
 Med. *
@@ -1347,7 +1349,7 @@ Med. *
 Med. 
 
 114. Flatten Binary Tree to Linked List
-Med. **
+Med. ***
 ```
 # Definition for a binary tree node.
 # class TreeNode:
@@ -1428,7 +1430,11 @@ Med. *
 Med. **
 
 330. Patching Array
-Hard **
+Hard *** 
+
+
+Stopping at half way here
+--------------------------
 
 387. First Unique Character in a String
 Easy
@@ -1829,8 +1835,9 @@ Easy
 Easy
 
 2104. Sum of Subarray Ranges
-Med. **
-Similar pattern : sum of subarray minimum
+Med. ***
+Prequisite pattern : sum of subarray minimum
+Prereq pattern: Previous smaller element, previous larger element, Next smaller/ larger element
 
 2210. Count Hills and Valleys in an Array
 Easy
@@ -1902,16 +1909,16 @@ Med.
 Hard
 
 126. Word Ladder II
-Hard
+Hard ***
 
 130. Surrounded Regions
 Med.
 
 134. Gas Station
-Med.
+Med. **
 
 137. Single Number II
-Med.
+Med. bit manipulation
 
 144. Binary Tree Preorder Traversal
 Easy
@@ -1920,10 +1927,10 @@ Easy
 Med.
 
 157. Read N Characters Given Read4
-Easy
+Easy ***
 
 158. Read N Characters Given read4 II - Call Multiple Times
-Hard
+Hard ***
 
 160. Intersection of Two Linked Lists
 Easy
@@ -1931,17 +1938,11 @@ Easy
 167. Two Sum II - Input Array Is Sorted
 Med.
 
-183. Customers Who Never Order
-Easy
-
 190. Reverse Bits
 Easy
 
-196. Delete Duplicate Emails
-Easy
-
 204. Count Primes
-Med.
+Med. Math problem **
 
 205. Isomorphic Strings
 Easy
@@ -1950,16 +1951,16 @@ Easy
 Med.
 
 214. Shortest Palindrome
-Hard
+Hard not Meta question
 
 218. The Skyline Problem
-Hard
+Hard ***, do a dry run
 
 222. Count Complete Tree Nodes
-Easy
+Easy ***
 
 228. Summary Ranges
-Easy
+Easy *
 
 230. Kth Smallest Element in a BST
 Med.
@@ -1969,15 +1970,16 @@ Easy
 
 261. Graph Valid Tree
 Med.
+patern: ***
 
 263. Ugly Number
-Easy
+Easy **
 
 264. Ugly Number II
-Med.
+Med. **
 
 265. Paint House II
-Hard
+Hard  https://www.youtube.com/watch?v=jGywRalvoRw
 
 271. Encode and Decode Strings
 Med.
@@ -1998,13 +2000,10 @@ Easy
 Med.
 
 325. Maximum Size Subarray Sum Equals k
-Med.
-
-326. Power of Three
-Easy
+Med. **
 
 340. Longest Substring with At Most K Distinct Characters
-Med.
+Med. practice this once
 
 345. Reverse Vowels of a String
 Easy
@@ -2019,16 +2018,21 @@ Med.
 Med.
 
 381. Insert Delete GetRandom O(1) - Duplicates allowed
-Hard
+Hard **
 
 417. Pacific Atlantic Water Flow
 Med.
 
 432. All O`one Data Structure
-Hard
+Hard ***
 
 435. Non-overlapping Intervals
 Med. **
+
+
+
+Dec 21
+--------
 
 455. Assign Cookies
 Easy
