@@ -105,6 +105,40 @@ def union(node_a, node_b, parent, rank):
 ```
 ### Dijktra Algorithm
 ```
+Relaxation: if vertex v is reachable from vertex u and cost of u -> v is c(u->v) then
+if d[v] > d[u] + c(u->v):
+    d[v] = d[u] + c(u->v)
+
+Python Implementation
+def shortestPath(self, n: int, edges: List[List[int]], src: int) -> Dict[int, int]:
+    # build the adjacency matrix
+    adj = {}
+    for i in range(n):
+        adj[i] = []
+    for snode, dnode, wgt in edges:
+        adj[snode].append([dnode, wgt])
+    
+    shortest = {} # key: node, value: distance to shortest path
+    minheap = [[0, src]] # distance, node, important to have distance first because the heap will be ordered by the distance 
+    while minheap:
+        w1, n1 = heapq.heappop(minheap)
+        if n1 in shortest:
+            continue
+        shortest[n1] = w1
+        # Due to min heap property the record that comes out first has the shortest distance, dry run to get clarity
+
+        # explore the neighbors
+        for n2, w2 in adj[n1]:
+            if n2 not in shortest:
+                heapq.heappush(minheap, [w1+w2, n2])
+        
+        # handle the unreachable nodes
+        for i in range(n):
+            if i not in shortest:
+                shortest[i] = -1
+        
+        return shortest
+
 ```
 ### Floyed Warshall Algorithm
 ```

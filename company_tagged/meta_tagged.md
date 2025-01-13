@@ -1270,7 +1270,7 @@ Med. *
 Med. *
 
 958. Check Completeness of a Binary Tree
-Med. ***
+Med. **
 
 995. Minimum Number of K Consecutive Bit Flips
 Hard ** I hate bitwise
@@ -1279,7 +1279,7 @@ Hard ** I hate bitwise
 Easy
 
 1778. Shortest Path in a Hidden Grid
-Med. **
+Med. ***
 Use DFS to identify the target and the grid, then bfs to identify the shortest path
 
 18. 4Sum
@@ -1388,7 +1388,7 @@ Easy
 Med. *
 
 152. Maximum Product Subarray
-Med. *
+Med. **
 
 155. Min Stack
 Med.
@@ -1397,7 +1397,7 @@ Med.
 Med. *
 
 168. Excel Sheet Column Title
-Easy **
+Easy ***
 
 189. Rotate Array
 Med. *
@@ -1473,7 +1473,7 @@ Easy *
 Hard ***
 
 885. Spiral Matrix III
-Med. **
+Med. ***
 
 896. Monotonic Array
 Easy
@@ -1485,7 +1485,7 @@ Med.
 Med. *
 
 930. Binary Subarrays With Sum
-Med. **
+Med. ***
 
 509. Fibonacci Number
 Easy
@@ -1497,7 +1497,7 @@ Med. *
 Easy *
 
 1213. Intersection of Three Sorted Arrays
-Easy **
+Easy ***
 
 ## Oct 17
 
@@ -1545,7 +1545,7 @@ so, keep track of the range of indices we can reach after everystep.
 ```
 
 46. Permutations
-Med. **
+Med. ***
 
 61. Rotate List
 Med. **
@@ -1560,7 +1560,7 @@ Med.
 Med. *** Try the O(1) space solution 
 
 135. Candy
-Hard **
+Hard ***
 
 143. Reorder List
 Med. **
@@ -1576,7 +1576,7 @@ on the slope as value.
 ```
 
 209. Minimum Size Subarray Sum
-Med. **
+Med. ***
 
 212. Word Search II
 Hard *** 
@@ -1635,7 +1635,7 @@ class Solution:
 Easy 
 
 224. Basic Calculator
-Hard **
+Hard ***
 
 226. Invert Binary Tree
 Easy *
@@ -1647,19 +1647,21 @@ Med.
 Med.
 
 295. Find Median from Data Stream
-Hard **
+Hard ***
 
 297. Serialize and Deserialize Binary Tree
-Hard **
+Hard ***
 
 299. Bulls and Cows
-Med. **
+Med. ** hate this question
 
 329. Longest Increasing Path in a Matrix
-Hard **
+Hard ***
 
 334. Increasing Triplet Subsequence
-Med. **
+Med. ***
+
+
 --- Nov 17
 337. House Robber III
 Med.
@@ -1671,7 +1673,7 @@ Easy
 Med.
 
 386. Lexicographical Numbers
-Med. **
+Med. ***
 
 399. Evaluate Division
 Med. *
@@ -1683,7 +1685,7 @@ Easy
 Med.
 
 437. Path Sum III
-Med. **
+Med. ***
 ```
 pattern
 map[cur_sum] -> count
