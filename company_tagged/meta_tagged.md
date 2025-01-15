@@ -2480,3 +2480,138 @@ class Solution:
         return build_balanced_tree(0, len(nodes)-1)
         
 ```
+
+All Heaps
+----------
+Status
+Title
+Solution
+Acceptance
+Difficulty
+Frequency
+2185. Counting Words With a Given Prefix
+83.7%
+Easy
+215. Kth Largest Element in an Array
+67.4%
+Medium
+973. K Closest Points to Origin
+67.4%
+Medium
+347. Top K Frequent Elements
+63.8%
+Medium
+23. Merge k Sorted Lists
+55.2%
+Hard
+1424. Diagonal Traverse II
+57.5%
+Medium
+480. Sliding Window Median
+38.7%
+Hard
+253. Meeting Rooms II
+51.8%
+Medium
+378. Kth Smallest Element in a Sorted Matrix
+63.1%
+Medium
+658. Find K Closest Elements
+48.2%
+Medium
+295. Find Median from Data Stream
+52.7%
+Hard
+857. Minimum Cost to Hire K Workers
+63.5%
+Hard
+1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
+62.0%
+Hard
+1810. Minimum Path Cost in a Hidden Grid
+58.3%
+Medium
+767. Reorganize String
+55.5%
+Medium
+2034. Stock Price Fluctuation
+48.6%
+Medium
+1094. Car Pooling
+56.0%
+Medium
+2611. Mice and Cheese
+46.7%
+Medium
+1845. Seat Reservation Manager
+69.9%
+Medium
+272. Closest Binary Search Tree Value II
+59.8%
+Hard
+239. Sliding Window Maximum
+47.1%
+Hard
+505. The Maze II
+53.9%
+Medium
+1985. Find the Kth Largest Integer in the Array
+46.2%
+Medium
+1353. Maximum Number of Events That Can Be Attended
+32.7%
+Medium
+1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+56.7%
+Medium
+2231. Largest Number After Digit Swaps by Parity
+62.8%
+Easy
+778. Swim in Rising Water
+62.0%
+Hard
+407. Trapping Rain Water II
+48.7%
+Hard
+632. Smallest Range Covering Elements from K Lists
+69.8%
+Hard
+1631. Path With Minimum Effort
+60.7%
+Medium
+703. Kth Largest Element in a Stream
+59.5%
+Easy
+451. Sort Characters By Frequency
+73.4%
+Medium
+502. IPO
+53.0%
+Hard
+218. The Skyline Problem
+43.4%
+Hard
+862. Shortest Subarray with Sum at Least K
+32.2%
+Hard
+787. Cheapest Flights Within K Stops
+39.9%
+Medium
+912. Sort an Array
+57.3%
+Medium
+373. Find K Pairs with Smallest Sums
+40.3%
+Medium
+621. Task Scheduler
+60.8%
+Medium
+1268. Search Suggestions System
+65.1%
+Medium
+1046. Last Stone Weight
+65.7%
+Easy
+642. Design Search Autocomplete System
+49.2%
+Hard

@@ -8,6 +8,32 @@ At any point to calculate median, check the size of heaps, if equal, return (lef
 ### Merge k sorted lists
 LC 23
 ```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        minheap = []
+
+        for list_index, node in enumerate(lists):
+            if node:
+                heapq.heappush(minheap, [node.val, list_index, node])
+        
+        d = ListNode()
+        cur = d
+
+        while minheap:
+            cval, cindex, cnode = heapq.heappop(minheap)
+            cur.next = cnode
+            cur = cnode
+            cnode = cnode.next
+            if cnode:
+                heapq.heappush(minheap, [cnode.val, cindex, cnode])
+        
+        return d.next
+            
 ```
 ### Remove Stones to Minimize the Total
 LC 1962
@@ -160,4 +186,45 @@ class Solution:
             if heap:
                 ans += 1
         return ans
+```
+### Sliding window median
+```
+class Solution:
+    def medianSlidingWindow(self, nums: List[int], k: int) -> List[float]:
+        # I was confused by the official solution and many of the top posts. This problem shouldn't be that hard! I ended up using the same template as in Question 295 and passed all tests on my first attempt. The key is using two heaps (just like 295) and keeping track of just two things - the element to include and the element to remove. Below is my Python solution:
+
+        if not nums or not k:
+            return []
+        lo = [] # max heap
+        hi = [] # min heap
+        for i in range(k):
+            if len(lo) == len(hi):
+                heapq.heappush(hi, -heapq.heappushpop(lo, -nums[i]))
+            else:
+                heapq.heappush(lo, -heapq.heappushpop(hi, nums[i]))
+        ans = [float(hi[0])] if k & 1 else [(hi[0] - lo[0]) / 2.0]
+        to_remove = defaultdict(int)
+        for i in range(k, len(nums)): # right bound of window
+            heapq.heappush(lo, -heapq.heappushpop(hi, nums[i])) # always push to lo
+            out_num = nums[i-k]
+            if out_num > -lo[0]:
+                heapq.heappush(hi, -heapq.heappop(lo))
+            to_remove[out_num] += 1
+            while lo and to_remove[-lo[0]]:
+                to_remove[-lo[0]] -= 1
+                heapq.heappop(lo)
+            while to_remove[hi[0]]:
+                to_remove[hi[0]] -= 1
+                heapq.heappop(hi)
+            if k % 2:
+                ans.append(float(hi[0]))
+            else:
+                ans.append((hi[0] - lo[0]) / 2.0)
+        return ans
+# A few important things to clarify:
+
+# Two heaps (lo and hi). The size of hi, as measured by the number of valid elements it contains, is either equal to that of lo or one greater than that of lo, depending on the value of k. (This is an invariant we enforce when we add and remove elements from lo and hi). It's worth noting that by "valid" I mean elements within the current window.
+# Lazy removal. I used a defaultdict to_remove to keep track of elements to be removed and their occurrances, and remove them if and only if they are at the top of either heaps.
+# How to add and remove. The logic is extremely straightforward. When adding a new element, we always add to lo. If the element to be removed is in lo as well, great! We don't need to do anything because the heap sizes do not change. However, if the element to be removed happen to be in hi, we then pop an element from lo and add it to hi. Important: that element we pop is guaranteed be a valid element(!!) because otherwise it should have been removed during the previous iteration.
+# Some may be worried that removing elements makes heaps imbalanced. That never happens! No matter how many elements are removed at the end of an iteration, they are invalid elements! The heap lo can contain all the invalid elements and much greater in size than hi, but still in perfect balance with hi. As long as lo and hi each contains half (or (half, half+1) when k is odd) of the elements in the current window, we say that they are balanced.
 ```
