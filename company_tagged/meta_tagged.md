@@ -2489,9 +2489,7 @@ Solution
 Acceptance
 Difficulty
 Frequency
-2185. Counting Words With a Given Prefix
-83.7%
-Easy
+
 215. Kth Largest Element in an Array
 67.4%
 Medium
@@ -2615,3 +2613,202 @@ Easy
 642. Design Search Autocomplete System
 49.2%
 Hard
+
+
+Binary Search
+-------------
+528. Random Pick with Weight
+47.9%
+Medium
+162. Find Peak Element
+46.3%
+Medium
+270. Closest Binary Search Tree Value
+50.4%
+Easy
+1004. Max Consecutive Ones III
+64.9%
+Medium
+1539. Kth Missing Positive Number
+61.5%
+Easy
+825. Friends Of Appropriate Ages
+48.6%
+Medium
+1060. Missing Element in Sorted Array
+58.0%
+Medium
+378. Kth Smallest Element in a Sorted Matrix
+63.1%
+Medium
+34. Find First and Last Position of Element in Sorted Array
+45.8%
+Medium
+658. Find K Closest Elements
+48.2%
+Medium
+1891. Cutting Ribbons
+51.3%
+Medium
+1011. Capacity To Ship Packages Within D Days
+71.1%
+Medium
+1498. Number of Subsequences That Satisfy the Given Sum Condition
+43.8%
+Medium
+1213. Intersection of Three Sorted Arrays
+80.2%
+Easy
+4. Median of Two Sorted Arrays
+42.4%
+Hard
+1055. Shortest Way to Form String
+60.7%
+Medium
+713. Subarray Product Less Than K
+52.2%
+Medium
+33. Search in Rotated Sorted Array
+42.1%
+Medium
+1062. Longest Repeating Substring
+62.6%
+Medium
+875. Koko Eating Bananas
+48.7%
+Medium
+633. Sum of Square Numbers
+36.5%
+Medium
+1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
+62.0%
+Hard
+3186. Maximum Total Damage With Spell Casting
+27.0%
+Medium
+278. First Bad Version
+45.3%
+Easy
+1428. Leftmost Column with at Least a One
+54.8%
+Medium
+540. Single Element in a Sorted Array
+59.2%
+Medium
+74. Search a 2D Matrix
+51.5%
+Medium
+1671. Minimum Number of Removals to Make Mountain Array
+55.0%
+Hard
+2468. Split Message Based on Limit
+43.2%
+Hard
+3161. Block Placement Queries
+15.3%
+Hard
+2501. Longest Square Streak in an Array
+53.1%
+Medium
+367. Valid Perfect Square
+44.0%
+Easy
+778. Swim in Rising Water
+62.0%
+Hard
+1574. Shortest Subarray to be Removed to Make Array Sorted
+51.8%
+Medium
+2981. Find Longest Special Substring That Occurs Thrice I
+62.3%
+Medium
+1095. Find in Mountain Array
+40.2%
+Hard
+240. Search a 2D Matrix II
+54.1%
+Medium
+153. Find Minimum in Rotated Sorted Array
+51.9%
+Medium
+81. Search in Rotated Sorted Array II
+38.4%
+Medium
+852. Peak Index in a Mountain Array
+67.9%
+Medium
+350. Intersection of Two Arrays II
+58.8%
+Easy
+1631. Path With Minimum Effort
+60.7%
+Medium
+287. Find the Duplicate Number
+62.1%
+Medium
+1901. Find a Peak Element II
+52.6%
+Medium
+362. Design Hit Counter
+68.9%
+Medium
+167. Two Sum II - Input Array Is Sorted
+62.6%
+Medium
+862. Shortest Subarray with Sum at Least K
+32.2%
+Hard
+1608. Special Array With X Elements Greater Than or Equal X
+66.8%
+Easy
+410. Split Array Largest Sum
+57.1%
+Hard
+1838. Frequency of the Most Frequent Element
+44.0%
+Medium
+493. Reverse Pairs
+31.5%
+Hard
+69. Sqrt(x)
+39.8%
+Easy
+222. Count Complete Tree Nodes
+68.4%
+Easy
+349. Intersection of Two Arrays
+75.8%
+Easy
+1268. Search Suggestions System
+65.1%
+Medium
+209. Minimum Size Subarray Sum
+48.4%
+Medium
+300. Longest Increasing Subsequence
+56.9%
+Medium
+1283. Find the Smallest Divisor Given a Threshold
+62.2%
+Medium
+704. Binary Search
+58.9%
+Easy
+1482. Minimum Number of Days to Make m Bouquets
+55.4%
+Medium
+981. Time Based Key-Value Store
+49.3%
+Medium
+268. Missing Number
+68.9%
+Easy
+35. Search Insert Position
+48.0%
+Easy
+275. H-Index II
+38.6%
+Medium
+2824. Count Pairs Whose Sum is Less than Target
+87.4%
+Easy
