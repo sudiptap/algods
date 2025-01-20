@@ -2623,7 +2623,7 @@ Medium
 162. Find Peak Element
 46.3%
 Medium
-270. Closest Binary Search Tree Value
+270. Closest Binary Search Tree Value - *
 50.4%
 Easy
 1004. Max Consecutive Ones III
@@ -2635,37 +2635,37 @@ Easy
 825. Friends Of Appropriate Ages
 48.6%
 Medium
-1060. Missing Element in Sorted Array
+1060. Missing Element in Sorted Array - *
 58.0%
 Medium
-378. Kth Smallest Element in a Sorted Matrix
+378. Kth Smallest Element in a Sorted Matrix - *
 63.1%
 Medium
 34. Find First and Last Position of Element in Sorted Array
 45.8%
 Medium
-658. Find K Closest Elements
+658. Find K Closest Elements - *
 48.2%
 Medium
-1891. Cutting Ribbons
+1891. Cutting Ribbons - *
 51.3%
 Medium
-1011. Capacity To Ship Packages Within D Days
+1011. Capacity To Ship Packages Within D Days- *
 71.1%
 Medium
-1498. Number of Subsequences That Satisfy the Given Sum Condition
+1498. Number of Subsequences That Satisfy the Given Sum Condition - *
 43.8%
 Medium
-1213. Intersection of Three Sorted Arrays
+1213. Intersection of Three Sorted Arrays - *
 80.2%
 Easy
-4. Median of Two Sorted Arrays
+4. Median of Two Sorted Arrays - **
 42.4%
 Hard
 1055. Shortest Way to Form String
 60.7%
 Medium
-713. Subarray Product Less Than K
+713. Subarray Product Less Than K - *
 52.2%
 Medium
 33. Search in Rotated Sorted Array
@@ -2680,7 +2680,7 @@ Medium
 633. Sum of Square Numbers
 36.5%
 Medium
-1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
+1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows - ** hard question
 62.0%
 Hard
 3186. Maximum Total Damage With Spell Casting
@@ -2689,22 +2689,23 @@ Medium
 278. First Bad Version
 45.3%
 Easy
-1428. Leftmost Column with at Least a One
+1428. Leftmost Column with at Least a One - code    
 54.8%
 Medium
 540. Single Element in a Sorted Array
 59.2%
 Medium
-74. Search a 2D Matrix
+74. Search a 2D Matrix - 
+pattern: 2d to 1d array id_index//num_cols = row_index, id_index%num_cols = col_index
 51.5%
 Medium
-1671. Minimum Number of Removals to Make Mountain Array
+1671. Minimum Number of Removals to Make Mountain Array - ** not a BinSearch question, LIS variant
 55.0%
 Hard
-2468. Split Message Based on Limit
+2468. Split Message Based on Limit - no solutions
 43.2%
 Hard
-3161. Block Placement Queries
+3161. Block Placement Queries - **
 15.3%
 Hard
 2501. Longest Square Streak in an Array
@@ -2716,10 +2717,10 @@ Easy
 778. Swim in Rising Water
 62.0%
 Hard
-1574. Shortest Subarray to be Removed to Make Array Sorted
+1574. Shortest Subarray to be Removed to Make Array Sorted ** not BinSrch
 51.8%
 Medium
-2981. Find Longest Special Substring That Occurs Thrice I
+2981. Find Longest Special Substring That Occurs Thrice I ** 
 62.3%
 Medium
 1095. Find in Mountain Array
