@@ -2723,13 +2723,13 @@ Medium
 2981. Find Longest Special Substring That Occurs Thrice I ** 
 62.3%
 Medium
-1095. Find in Mountain Array
+1095. Find in Mountain Array - code
 40.2%
 Hard
 240. Search a 2D Matrix II
 54.1%
 Medium
-153. Find Minimum in Rotated Sorted Array
+153. Find Minimum in Rotated Sorted Array - *
 51.9%
 Medium
 81. Search in Rotated Sorted Array II
@@ -2741,10 +2741,10 @@ Medium
 350. Intersection of Two Arrays II
 58.8%
 Easy
-1631. Path With Minimum Effort
+1631. Path With Minimum Effort - djikstra variant
 60.7%
 Medium
-287. Find the Duplicate Number
+287. Find the Duplicate Number 
 62.1%
 Medium
 1901. Find a Peak Element II
@@ -2756,16 +2756,16 @@ Medium
 167. Two Sum II - Input Array Is Sorted
 62.6%
 Medium
-862. Shortest Subarray with Sum at Least K
+862. Shortest Subarray with Sum at Least K - monotonic queue, sliding window
 32.2%
 Hard
-1608. Special Array With X Elements Greater Than or Equal X
+1608. Special Array With X Elements Greater Than or Equal X - *
 66.8%
 Easy
-410. Split Array Largest Sum
+410. Split Array Largest Sum - code
 57.1%
 Hard
-1838. Frequency of the Most Frequent Element
+1838. Frequency of the Most Frequent Element - sliding window
 44.0%
 Medium
 493. Reverse Pairs
@@ -2798,7 +2798,7 @@ Easy
 1482. Minimum Number of Days to Make m Bouquets
 55.4%
 Medium
-981. Time Based Key-Value Store
+981. Time Based Key-Value Store - code
 49.3%
 Medium
 268. Missing Number
@@ -2813,3 +2813,105 @@ Medium
 2824. Count Pairs Whose Sum is Less than Target
 87.4%
 Easy
+
+## Sliding Window
+
+1004. Max Consecutive Ones III
+64.9%
+Medium
+480. Sliding Window Median
+38.7%
+Hard
+76. Minimum Window Substring
+44.4%
+Hard
+727. Minimum Window Subsequence
+43.5%
+Hard
+658. Find K Closest Elements
+48.2%
+Medium
+219. Contains Duplicate II
+47.6%
+Easy
+1358. Number of Substrings Containing All Three Characters
+68.4%
+Medium
+643. Maximum Average Subarray I
+44.4%
+Easy
+713. Subarray Product Less Than K
+52.2%
+Medium
+2461. Maximum Sum of Distinct Subarrays With Length K
+42.8%
+Medium
+995. Minimum Number of K Consecutive Bit Flips
+62.7%
+Hard
+424. Longest Repeating Character Replacement
+56.1%
+Medium
+3097. Shortest Subarray With OR at Least K II
+50.5%
+Medium
+3. Longest Substring Without Repeating Characters
+36.0%
+Medium
+239. Sliding Window Maximum
+47.1%
+Hard
+904. Fruit Into Baskets
+45.4%
+Medium
+2090. K Radius Subarray Averages
+46.1%
+Medium
+2516. Take K of Each Character From Left and Right
+51.9%
+Medium
+340. Longest Substring with At Most K Distinct Characters
+49.2%
+Medium
+930. Binary Subarrays With Sum
+64.7%
+Medium
+2962. Count Subarrays Where Max Element Appears at Least K Times
+58.7%
+Medium
+1052. Grumpy Bookstore Owner
+64.1%
+Medium
+1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+56.7%
+Medium
+2981. Find Longest Special Substring That Occurs Thrice I
+62.3%
+Medium
+438. Find All Anagrams in a String
+51.7%
+Medium
+632. Smallest Range Covering Elements from K Lists
+69.8%
+Hard
+1493. Longest Subarray of 1's After Deleting One Element
+68.5%
+Medium
+862. Shortest Subarray with Sum at Least K
+32.2%
+Hard
+1838. Frequency of the Most Frequent Element
+44.0%
+Medium
+209. Minimum Size Subarray Sum
+48.5%
+Medium
+30. Substring with Concatenation of All Words
+32.7%
+Hard
+992. Subarrays with K Different Integers
+64.8%
+Hard
+567. Permutation in String
+46.7%
+Medium
