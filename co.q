@@ -1,0 +1,227 @@
+2. Add Two Numbers
+47.9%
+Med.
+
+546. Remove Boxes
+49.3%
+Hard
+
+48. Rotate Image
+79.3%
+Med.
+
+68. Text Justification
+50.4%
+Hard
+
+71. Simplify Path
+50.0%
+Med.
+
+723. Candy Crush
+77.3%
+Med.
+
+3043. Find the Length of the Longest Common Prefix
+57.0%
+Med.
+
+1390. Four Divisors
+56.6%
+Med.
+
+2251. Number of Flowers in Full Bloom
+57.7%
+Hard
+
+3101. Count Alternating Subarrays
+57.3%
+Med.
+
+322. Coin Change
+48.0%
+Med.
+
+2043. Simple Bank System
+69.8%
+Med.
+
+121. Best Time to Buy and Sell Stock
+56.4%
+Easy
+
+435. Non-overlapping Intervals
+56.7%
+Med.
+
+3161. Block Placement Queries
+18.4%
+Hard
+
+54. Spiral Matrix
+56.1%
+Med.
+
+3071. Minimum Operations to Write the Letter Y on a Grid
+64.3%
+Med.
+
+1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+57.4%
+Med.
+
+257. Binary Tree Paths
+68.2%
+Easy
+
+253. Meeting Rooms II
+52.5%
+Med.
+
+1166. Design File System
+65.1%
+Med.
+
+84. Largest Rectangle in Histogram
+49.3%
+Hard
+
+200. Number of Islands
+63.8%
+Med.
+
+9. Palindrome Number
+60.3%
+Easy
+
+415. Add Strings
+52.1%
+Easy
+
+2169. Count Operations to Obtain Zero
+79.8%
+Easy
+
+1861. Rotating the Box
+79.2%
+Med.
+
+3045. Count Prefix and Suffix Pairs II
+28.1%
+Hard
+
+3042. Count Prefix and Suffix Pairs I
+77.8%
+Easy
+
+20. Valid Parentheses
+43.7%
+Easy
+
+2768. Number of Black Blocks
+41.5%
+Med.
+
+122. Best Time to Buy and Sell Stock II
+70.7%
+Med.
+
+2672. Number of Adjacent Elements With the Same Color
+58.1%
+Med.
+
+3034. Number of Subarrays That Match a Pattern I
+68.4%
+Med.
+
+56. Merge Intervals
+51.2%
+Med.
+
+2817. Minimum Absolute Difference Between Elements With Constraint
+37.2%
+Med.
+
+146. LRU Cache
+46.8%
+Med.
+
+539. Minimum Time Difference
+62.6%
+Med.
+
+992. Subarrays with K Different Integers
+67.6%
+Hard
+
+3. Longest Substring Without Repeating Characters
+38.5%
+Med.
+
+733. Flood Fill
+67.9%
+Easy
+
+11. Container With Most Water
+59.5%
+Med.
+
+2021. Brightest Position on Street
+60.6%
+Med.
+
+1743. Restore the Array From Adjacent Pairs
+75.1%
+Med.
+
+1052. Grumpy Bookstore Owner
+64.0%
+Med.
+
+2544. Alternating Digit Sum
+69.0%
+Easy
+
+896. Monotonic Array
+62.2%
+Easy
+
+1814. Count Nice Pairs in an Array
+48.4%
+Med.
+
+2502. Design Memory Allocator
+49.7%
+Med.
+
+332. Reconstruct Itinerary
+44.3%
+Hard
+
+127. Word Ladder
+44.9%
+Hard
+
+3019. Number of Changing Keys
+80.5%
+Easy
+
+560. Subarray Sum Equals K
+46.8%
+Med.
+
+17. Letter Combinations of a Phone Number
+65.5%
+Med.
+
+2141. Maximum Running Time of N Computers
+56.4%
+Hard
+
+647. Palindromic Substrings
+72.5%
+Med.
+
+2023. Number of Pairs of Strings With Concatenation Equal to Target
+75.4%
+Med.
