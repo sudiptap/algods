@@ -14,8 +14,8 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 70 | Climbing Stairs | Easy | Y | [solution](01_fibonacci_pattern/solutions/70-climbing-stairs.py) |
 | 509 | Fibonacci Number | Easy | Y | [solution](01_fibonacci_pattern/solutions/509-fibonacci-number.py) |
 | 746 | Min Cost Climbing Stairs | Easy | Y | [solution](01_fibonacci_pattern/solutions/746-min-cost-climbing-stairs.py) |
-| 1025 | Divisor Game | Easy | | |
-| 1137 | N-th Tribonacci Number | Easy | | |
+| 1025 | Divisor Game | Easy | Y | [solution](01_fibonacci_pattern/solutions/1025-divisor-game.py) |
+| 1137 | N-th Tribonacci Number | Easy | Y | [solution](01_fibonacci_pattern/solutions/1137-nth-tribonacci-number.py) |
 | 91 | Decode Ways | Medium | Y | [solution](01_fibonacci_pattern/solutions/91-decode-ways.py) |
 | 198 | House Robber | Medium | Y | [solution](01_fibonacci_pattern/solutions/198-house-robber.py) |
 | 213 | House Robber II | Medium | Y | [solution](01_fibonacci_pattern/solutions/213-house-robber-ii.py) |
@@ -24,7 +24,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 740 | Delete and Earn | Medium | Y | [solution](01_fibonacci_pattern/solutions/740-delete-and-earn.py) |
 | 790 | Domino and Tromino Tiling | Medium | Y | [solution](01_fibonacci_pattern/solutions/790-domino-and-tromino-tiling.py) |
 | 935 | Knight Dialer | Medium | Y | [solution](01_fibonacci_pattern/solutions/935-knight-dialer.py) |
-| 1578 | Minimum Time to Make Rope Colorful | Medium | | |
+| 1578 | Minimum Time to Make Rope Colorful | Medium | Y | [solution](01_fibonacci_pattern/solutions/1578-minimum-time-to-make-rope-colorful.py) |
 | 2466 | Count Ways To Build Good Strings | Medium | | |
 | 2320 | Count Number of Ways to Place Houses | Medium | | |
 | 2745 | Construct the Longest New String | Medium | | |
@@ -43,7 +43,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 416 | Partition Equal Subset Sum | Medium | Y | [solution](02_knapsack_01/solutions/416-partition-equal-subset-sum.py) |
 | 474 | Ones and Zeroes | Medium | Y | [solution](02_knapsack_01/solutions/474-ones-and-zeroes.py) |
 | 494 | Target Sum | Medium | Y | [solution](02_knapsack_01/solutions/494-target-sum.py) |
-| 1049 | Last Stone Weight II | Medium | | |
+| 1049 | Last Stone Weight II | Medium | Y | [solution](02_knapsack_01/solutions/1049-last-stone-weight-ii.py) |
 | 1981 | Minimize the Difference Between Target and Chosen Elements | Medium | | |
 | 2291 | Maximum Profit From Trading Stocks | Medium | | |
 | 2431 | Maximize Total Tastiness of Purchased Fruits | Medium | | |
@@ -73,7 +73,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 377 | Combination Sum IV | Medium | Y | [solution](03_unbounded_knapsack/solutions/377-combination-sum-iv.py) |
 | 518 | Coin Change II | Medium | Y | [solution](03_unbounded_knapsack/solutions/518-coin-change-ii.py) |
 | 983 | Minimum Cost For Tickets | Medium | Y | [solution](03_unbounded_knapsack/solutions/983-minimum-cost-for-tickets.py) |
-| 1155 | Number of Dice Rolls With Target Sum | Medium | | |
+| 1155 | Number of Dice Rolls With Target Sum | Medium | Y | [solution](03_unbounded_knapsack/solutions/1155-number-of-dice-rolls-with-target-sum.py) |
 | 2787 | Ways to Express an Integer as Sum of Powers | Medium | | |
 | 2979 | Most Expensive Item That Can Not Be Bought | Medium | | |
 | 3183 | The Number of Ways to Make the Sum | Medium | | |
@@ -93,15 +93,15 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 583 | Delete Operation for Two Strings | Medium | Y | [solution](04_longest_common_subsequence/solutions/583-delete-operation-for-two-strings.py) |
 | 712 | Minimum ASCII Delete Sum for Two Strings | Medium | Y | [solution](04_longest_common_subsequence/solutions/712-minimum-ascii-delete-sum-for-two-strings.py) |
 | 718 | Maximum Length of Repeated Subarray | Medium | Y | [solution](04_longest_common_subsequence/solutions/718-maximum-length-of-repeated-subarray.py) |
-| 1035 | Uncrossed Lines | Medium | | |
-| 1143 | Longest Common Subsequence | Medium | | |
+| 1035 | Uncrossed Lines | Medium | Y | [solution](04_longest_common_subsequence/solutions/1035-uncrossed-lines.py) |
+| 1143 | Longest Common Subsequence | Medium | Y | [solution](04_longest_common_subsequence/solutions/1143-longest-common-subsequence.py) |
 | 1458 | Max Dot Product of Two Subsequences | Hard | | |
 | 72 | Edit Distance | Medium | Y | [solution](04_longest_common_subsequence/solutions/72-edit-distance.py) |
 | 97 | Interleaving String | Medium | Y | [solution](04_longest_common_subsequence/solutions/97-interleaving-string.py) |
 | 10 | Regular Expression Matching | Hard | Y | [solution](04_longest_common_subsequence/solutions/10-regular-expression-matching.py) |
 | 44 | Wildcard Matching | Hard | Y | [solution](04_longest_common_subsequence/solutions/44-wildcard-matching.py) |
 | 115 | Distinct Subsequences | Hard | Y | [solution](04_longest_common_subsequence/solutions/115-distinct-subsequences.py) |
-| 1092 | Shortest Common Supersequence | Hard | | |
+| 1092 | Shortest Common Supersequence | Hard | Y | [solution](04_longest_common_subsequence/solutions/1092-shortest-common-supersequence.py) |
 | 727 | Minimum Window Subsequence | Hard | | |
 | 2060 | Check if an Original String Exists Given Two Encoded Strings | Hard | | |
 | 3135 | Equalize Strings by Adding or Removing Characters at Ends | Medium | | |
@@ -119,10 +119,10 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 376 | Wiggle Subsequence | Medium | Y | [solution](05_longest_increasing_subsequence/solutions/376-wiggle-subsequence.py) |
 | 646 | Maximum Length of Pair Chain | Medium | Y | [solution](05_longest_increasing_subsequence/solutions/646-maximum-length-of-pair-chain.py) |
 | 673 | Number of Longest Increasing Subsequence | Medium | Y | [solution](05_longest_increasing_subsequence/solutions/673-number-of-longest-increasing-subsequence.py) |
-| 1027 | Longest Arithmetic Subsequence | Medium | | |
-| 1048 | Longest String Chain | Medium | | |
-| 1218 | Longest Arithmetic Subsequence of Given Difference | Medium | | |
-| 1626 | Best Team With No Conflicts | Medium | | |
+| 1027 | Longest Arithmetic Subsequence | Medium | Y | [solution](05_longest_increasing_subsequence/solutions/1027-longest-arithmetic-subsequence.py) |
+| 1048 | Longest String Chain | Medium | Y | [solution](05_longest_increasing_subsequence/solutions/1048-longest-string-chain.py) |
+| 1218 | Longest Arithmetic Subsequence of Given Difference | Medium | Y | [solution](05_longest_increasing_subsequence/solutions/1218-longest-arithmetic-subsequence-of-given-difference.py) |
+| 1626 | Best Team With No Conflicts | Medium | Y | [solution](05_longest_increasing_subsequence/solutions/1626-best-team-with-no-conflicts.py) |
 | 2370 | Longest Ideal Subsequence | Medium | | |
 | 2501 | Longest Square Streak in an Array | Medium | | |
 | 2826 | Sorting Three Groups | Medium | | |
@@ -132,7 +132,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 446 | Arithmetic Slices II - Subsequence | Hard | Y | [solution](05_longest_increasing_subsequence/solutions/446-arithmetic-slices-ii-subsequence.py) |
 | 873 | Length of Longest Fibonacci Subsequence | Medium | | |
 | 1187 | Make Array Strictly Increasing | Hard | | |
-| 1671 | Minimum Number of Removals to Make Mountain Array | Hard | | |
+| 1671 | Minimum Number of Removals to Make Mountain Array | Hard | Y | [solution](05_longest_increasing_subsequence/solutions/1671-minimum-number-of-removals-to-make-mountain-array.py) |
 | 1691 | Maximum Height by Stacking Cuboids | Hard | | |
 | 1964 | Find the Longest Valid Obstacle Course at Each Position | Hard | | |
 | 2407 | Longest Increasing Subsequence II | Hard | | |
@@ -157,9 +157,9 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 845 | Longest Mountain in Array | Medium | | |
 | 918 | Maximum Sum Circular Subarray | Medium | Y | [solution](06_kadanes_pattern/solutions/918-maximum-sum-circular-subarray.py) |
 | 978 | Longest Turbulent Subarray | Medium | | |
-| 1186 | Maximum Subarray Sum with One Deletion | Medium | | |
+| 1186 | Maximum Subarray Sum with One Deletion | Medium | Y | [solution](06_kadanes_pattern/solutions/1186-maximum-subarray-sum-with-one-deletion.py) |
 | 1191 | K-Concatenation Maximum Sum | Medium | | |
-| 1567 | Maximum Length of Subarray With Positive Product | Medium | | |
+| 1567 | Maximum Length of Subarray With Positive Product | Medium | Y | [solution](06_kadanes_pattern/solutions/1567-maximum-length-of-subarray-with-positive-product.py) |
 | 1746 | Maximum Subarray Sum After One Operation | Medium | | |
 | 1749 | Maximum Absolute Sum of Any Subarray | Medium | | |
 | 2036 | Maximum Alternating Subarray Sum | Medium | | |
@@ -185,11 +185,11 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 |---|---------|------------|--------|----------|
 | 241 | Different Ways to Add Parentheses | Medium | Y | [solution](07_matrix_chain_multiplication/solutions/241-different-ways-to-add-parentheses.py) |
 | 375 | Guess Number Higher or Lower II | Medium | Y | [solution](07_matrix_chain_multiplication/solutions/375-guess-number-higher-or-lower-ii.py) |
-| 1039 | Minimum Score Triangulation of Polygon | Medium | | |
-| 1130 | Minimum Cost Tree From Leaf Values | Medium | | |
+| 1039 | Minimum Score Triangulation of Polygon | Medium | Y | [solution](07_matrix_chain_multiplication/solutions/1039-minimum-score-triangulation-of-polygon.py) |
+| 1130 | Minimum Cost Tree From Leaf Values | Medium | Y | [solution](07_matrix_chain_multiplication/solutions/1130-minimum-cost-tree-from-leaf-values.py) |
 | 312 | Burst Balloons | Hard | Y | [solution](07_matrix_chain_multiplication/solutions/312-burst-balloons.py) |
 | 1000 | Minimum Cost to Merge Stones | Hard | | |
-| 1547 | Minimum Cost to Cut a Stick | Hard | | |
+| 1547 | Minimum Cost to Cut a Stick | Hard | Y | [solution](07_matrix_chain_multiplication/solutions/1547-minimum-cost-to-cut-a-stick.py) |
 | 813 | Largest Sum of Averages | Medium | | |
 | 410 | Split Array Largest Sum | Hard | Y | [solution](07_matrix_chain_multiplication/solutions/410-split-array-largest-sum.py) |
 | 1335 | Minimum Difficulty of a Job Schedule | Hard | | |
@@ -217,7 +217,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 1216 | Valid Palindrome III | Hard | | |
 | 1246 | Palindrome Removal | Hard | | |
 | 1278 | Palindrome Partitioning III | Hard | | |
-| 1312 | Minimum Insertion Steps to Make a String Palindrome | Hard | | |
+| 1312 | Minimum Insertion Steps to Make a String Palindrome | Hard | Y | [solution](08_palindromic_subsequence/solutions/1312-minimum-insertion-steps-to-make-a-string-palindrome.py) |
 | 1745 | Palindrome Partitioning IV | Hard | | |
 | 1771 | Maximize Palindrome Length From Subsequences | Hard | | |
 | 2472 | Maximum Number of Non-overlapping Palindrome Substrings | Hard | | |
@@ -294,7 +294,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 542 | 01 Matrix | Medium | | |
 | 562 | Longest Line of Consecutive One in Matrix | Medium | | |
 | 931 | Minimum Falling Path Sum | Medium | Y | [solution](10_dp_on_grids/solutions/931-minimum-falling-path-sum.py) |
-| 1277 | Count Square Submatrices with All Ones | Medium | | |
+| 1277 | Count Square Submatrices with All Ones | Medium | Y | [solution](10_dp_on_grids/solutions/1277-count-square-submatrices-with-all-ones.py) |
 | 1504 | Count Submatrices With All Ones | Medium | | |
 | 1594 | Maximum Non Negative Product in a Matrix | Medium | | |
 | 2304 | Minimum Path Cost in a Grid | Medium | | |
@@ -311,9 +311,9 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 329 | Longest Increasing Path in a Matrix | Hard | Y | [solution](10_dp_on_grids/solutions/329-longest-increasing-path-in-a-matrix.py) |
 | 741 | Cherry Pickup | Hard | Y | [solution](10_dp_on_grids/solutions/741-cherry-pickup.py) |
 | 1139 | Largest 1-Bordered Square | Medium | | |
-| 1289 | Minimum Falling Path Sum II | Hard | | |
+| 1289 | Minimum Falling Path Sum II | Hard | Y | [solution](10_dp_on_grids/solutions/1289-minimum-falling-path-sum-ii.py) |
 | 1301 | Number of Paths with Max Score | Hard | | |
-| 1463 | Cherry Pickup II | Hard | | |
+| 1463 | Cherry Pickup II | Hard | Y | [solution](10_dp_on_grids/solutions/1463-cherry-pickup-ii.py) |
 | 2088 | Count Fertile Pyramids in a Land | Hard | | |
 | 2267 | Check if There Is a Valid Parentheses String Path | Hard | | |
 | 2328 | Number of Increasing Paths in a Grid | Hard | | |
@@ -348,10 +348,10 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 847 | Shortest Path Visiting All Nodes | Hard | | |
 | 943 | Find the Shortest Superstring | Hard | Y | [solution](11_bitmask_dp/solutions/943-find-the-shortest-superstring.py) |
 | 996 | Number of Squareful Arrays | Hard | | |
-| 1125 | Smallest Sufficient Team | Hard | | |
+| 1125 | Smallest Sufficient Team | Hard | Y | [solution](11_bitmask_dp/solutions/1125-smallest-sufficient-team.py) |
 | 1349 | Maximum Students Taking Exam | Hard | | |
 | 1434 | Number of Ways to Wear Different Hats to Each Other | Hard | | |
-| 1494 | Parallel Courses II | Hard | | |
+| 1494 | Parallel Courses II | Hard | Y | [solution](11_bitmask_dp/solutions/1494-parallel-courses-ii.py) |
 | 1595 | Minimum Cost to Connect Two Groups of Points | Hard | | |
 | 1617 | Count Subtrees With Max Distance Between Cities | Hard | | |
 | 1655 | Distribute Repeating Integers | Hard | | |
@@ -383,13 +383,13 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 464 | Can I Win | Medium | Y | [solution](12_interval_dp/solutions/464-can-i-win.py) |
 | 486 | Predict the Winner | Medium | Y | [solution](12_interval_dp/solutions/486-predict-the-winner.py) |
 | 877 | Stone Game | Medium | Y | [solution](12_interval_dp/solutions/877-stone-game.py) |
-| 1140 | Stone Game II | Medium | | |
+| 1140 | Stone Game II | Medium | Y | [solution](12_interval_dp/solutions/1140-stone-game-ii.py) |
 | 1690 | Stone Game VII | Medium | | |
 | 1908 | Game of Nim | Medium | | |
 | 294 | Flip Game II | Medium | Y | [solution](12_interval_dp/solutions/294-flip-game-ii.py) |
 | 546 | Remove Boxes | Hard | Y | [solution](12_interval_dp/solutions/546-remove-boxes.py) |
 | 664 | Strange Printer | Hard | Y | [solution](12_interval_dp/solutions/664-strange-printer.py) |
-| 1406 | Stone Game III | Hard | | |
+| 1406 | Stone Game III | Hard | Y | [solution](12_interval_dp/solutions/1406-stone-game-iii.py) |
 | 1510 | Stone Game IV | Hard | | |
 | 1563 | Stone Game V | Hard | | |
 | 1728 | Cat and Mouse II | Hard | | |
@@ -447,7 +447,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 123 | Best Time to Buy and Sell Stock III | Hard | Y | [solution](14_state_machine_dp/solutions/123-best-time-to-buy-and-sell-stock-iii.py) |
 | 188 | Best Time to Buy and Sell Stock IV | Hard | Y | [solution](14_state_machine_dp/solutions/188-best-time-to-buy-and-sell-stock-iv.py) |
 | 552 | Student Attendance Record II | Hard | Y | [solution](14_state_machine_dp/solutions/552-student-attendance-record-ii.py) |
-| 1220 | Count Vowels Permutation | Hard | | |
+| 1220 | Count Vowels Permutation | Hard | Y | [solution](14_state_machine_dp/solutions/1220-count-vowels-permutation.py) |
 | 1223 | Dice Roll Simulation | Hard | | |
 | 1787 | Make the XOR of All Segments Equal to Zero | Hard | | |
 | 1955 | Count Number of Special Subsequences | Hard | | |
@@ -469,7 +469,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 634 | Find the Derangement of An Array | Medium | | |
 | 1227 | Airplane Seat Assignment Probability | Medium | | |
 | 1259 | Handshakes That Don't Cross | Hard | | |
-| 1395 | Count Number of Teams | Medium | | |
+| 1395 | Count Number of Teams | Medium | Y | [solution](15_counting_combinatorial/solutions/1395-count-number-of-teams.py) |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | Medium | | |
 | 1641 | Count Sorted Vowel Strings | Medium | | |
 | 1643 | Kth Smallest Instructions | Hard | | |
@@ -529,9 +529,9 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 472 | Concatenated Words | Hard | Y | [solution](16_string_dp/solutions/472-concatenated-words.py) |
 | 940 | Distinct Subsequences II | Hard | Y | [solution](16_string_dp/solutions/940-distinct-subsequences-ii.py) |
 | 1397 | Find All Good Strings | Hard | | |
-| 1416 | Restore The Array | Hard | | |
+| 1416 | Restore The Array | Hard | Y | [solution](16_string_dp/solutions/1416-restore-the-array.py) |
 | 1531 | String Compression II | Hard | | |
-| 1639 | Number of Ways to Form a Target String Given a Dictionary | Hard | | |
+| 1639 | Number of Ways to Form a Target String Given a Dictionary | Hard | Y | [solution](16_string_dp/solutions/1639-number-of-ways-to-form-a-target-string-given-a-dictionary.py) |
 | 1977 | Number of Ways to Separate Numbers | Hard | | |
 | 1987 | Number of Unique Good Subsequences | Hard | | |
 | 2430 | Maximum Deletions on a String | Hard | | |
@@ -577,7 +577,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | # | Problem | Difficulty | Solved | Solution |
 |---|---------|------------|--------|----------|
 | 787 | Cheapest Flights Within K Stops | Medium | Y | [solution](18_graph_dp/solutions/787-cheapest-flights-within-k-stops.py) |
-| 1334 | Find the City With the Smallest Number of Neighbors at a Threshold Distance | Medium | | |
+| 1334 | Find the City With the Smallest Number of Neighbors at a Threshold Distance | Medium | Y | [solution](18_graph_dp/solutions/1334-find-the-city-with-the-smallest-number-of-neighbors.py) |
 | 1786 | Number of Restricted Paths From First to Last Node | Medium | | |
 | 1976 | Number of Ways to Arrive at Destination | Medium | | |
 | 3332 | Maximum Points Tourist Can Earn | Medium | | |
@@ -624,16 +624,16 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 838 | Push Dominoes | Medium | | |
 | 898 | Bitwise ORs of Subarrays | Medium | | |
 | 1014 | Best Sightseeing Pair | Medium | Y | [solution](19_linear_dp/solutions/1014-best-sightseeing-pair.py) |
-| 1024 | Video Stitching | Medium | | |
-| 1043 | Partition Array for Maximum Sum | Medium | | |
-| 1105 | Filling Bookcase Shelves | Medium | | |
+| 1024 | Video Stitching | Medium | Y | [solution](19_linear_dp/solutions/1024-video-stitching.py) |
+| 1043 | Partition Array for Maximum Sum | Medium | Y | [solution](19_linear_dp/solutions/1043-partition-array-for-maximum-sum.py) |
+| 1105 | Filling Bookcase Shelves | Medium | Y | [solution](19_linear_dp/solutions/1105-filling-bookcase-shelves.py) |
 | 1387 | Sort Integers by The Power Value | Medium | | |
 | 1477 | Find Two Non-overlapping Sub-arrays Each With Target Sum | Medium | | |
 | 1493 | Longest Subarray of 1's After Deleting One Element | Medium | | |
 | 1524 | Number of Sub-arrays With Odd Sum | Medium | | |
 | 1525 | Number of Good Ways to Split a String | Medium | | |
-| 1653 | Minimum Deletions to Make String Balanced | Medium | | |
-| 1696 | Jump Game VI | Medium | | |
+| 1653 | Minimum Deletions to Make String Balanced | Medium | Y | [solution](19_linear_dp/solutions/1653-minimum-deletions-to-make-string-balanced.py) |
+| 1696 | Jump Game VI | Medium | Y | [solution](19_linear_dp/solutions/1696-jump-game-vi.py) |
 | 1871 | Jump Game VII | Medium | | |
 | 1884 | Egg Drop With 2 Eggs and N Floors | Medium | | |
 | 1888 | Minimum Number of Flips to Make the Binary String Alternating | Medium | | |
@@ -707,19 +707,19 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 960 | Delete Columns to Make Sorted III | Hard | | |
 | 964 | Least Operators to Express Number | Hard | | |
 | 975 | Odd Even Jump | Hard | | |
-| 1235 | Maximum Profit in Job Scheduling | Hard | | |
+| 1235 | Maximum Profit in Job Scheduling | Hard | Y | [solution](19_linear_dp/solutions/1235-maximum-profit-in-job-scheduling.py) |
 | 1262 | Greatest Sum Divisible by Three | Medium | | |
 | 1269 | Number of Ways to Stay in the Same Place After Some Steps | Hard | | |
 | 1320 | Minimum Distance to Type a Word Using Two Fingers | Hard | | |
-| 1326 | Minimum Number of Taps to Open to Water a Garden | Hard | | |
-| 1340 | Jump Game V | Hard | | |
+| 1326 | Minimum Number of Taps to Open to Water a Garden | Hard | Y | [solution](19_linear_dp/solutions/1326-minimum-number-of-taps-to-open-to-water-a-garden.py) |
+| 1340 | Jump Game V | Hard | Y | [solution](19_linear_dp/solutions/1340-jump-game-v.py) |
 | 1363 | Largest Multiple of Three | Hard | | |
 | 1388 | Pizza With 3n Slices | Hard | | |
-| 1402 | Reducing Dishes | Hard | | |
+| 1402 | Reducing Dishes | Hard | Y | [solution](19_linear_dp/solutions/1402-reducing-dishes.py) |
 | 1420 | Build Array Where You Can Find The Maximum Exactly K Comparisons | Hard | | |
-| 1425 | Constrained Subsequence Sum | Hard | | |
+| 1425 | Constrained Subsequence Sum | Hard | Y | [solution](19_linear_dp/solutions/1425-constrained-subsequence-sum.py) |
 | 1444 | Number of Ways of Cutting a Pizza | Hard | | |
-| 1473 | Paint House III | Hard | | |
+| 1473 | Paint House III | Hard | Y | [solution](19_linear_dp/solutions/1473-paint-house-iii.py) |
 | 1526 | Minimum Number of Increments on Subarrays to Form a Target Array | Hard | | |
 | 1537 | Get the Maximum Score | Hard | | |
 | 1553 | Minimum Number of Days to Eat N Oranges | Hard | | |
