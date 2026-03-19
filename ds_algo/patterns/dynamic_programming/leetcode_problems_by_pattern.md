@@ -370,7 +370,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 3257 | Maximum Value Sum by Placing Three Rooks II | Hard | Y | [solution](11_bitmask_dp/solutions/3257-maximum-value-sum-by-placing-three-rooks-ii.py) |
 | 3276 | Select Cells in Grid With Maximum Score | Hard | Y | [solution](11_bitmask_dp/solutions/3276-select-cells-in-grid-with-maximum-score.py) |
 | 3287 | Find the Maximum Sequence Value of Array | Hard | Y | [solution](11_bitmask_dp/solutions/3287-find-the-maximum-sequence-value-of-array.py) |
-| 3533 | Concatenated Divisibility | Hard | | |
+| 3533 | Concatenated Divisibility | Hard | Y | [solution](11_bitmask_dp/solutions/3533-concatenated-divisibility.py) |
 | 3725 | Count Ways to Choose Coprime Integers from Rows | Hard | Y | [solution](11_bitmask_dp/solutions/3725-count-ways-to-choose-coprime-integers-from-rows.py) |
 
 ---
@@ -590,8 +590,8 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 2858 | Minimum Edge Reversals So Every Node Is Reachable | Hard | Y | [solution](09_dp_on_trees/solutions/2858-minimum-edge-reversals-so-every-node-is-reachable.py) |
 | 2876 | Count Visited Nodes in a Directed Graph | Hard | Y | [solution](19_linear_dp/solutions/2876-count-visited-nodes-in-a-directed-graph.py) |
 | 2912 | Number of Ways to Reach Destination in the Grid | Hard | Y | [solution](15_counting_combinatorial/solutions/2912-number-of-ways-to-reach-destination-in-the-grid.py) |
-| 3530 | Maximum Profit from Valid Topological Order in DAG | Hard | | |
-| 3534 | Path Existence Queries in a Graph II | Hard | | |
+| 3530 | Maximum Profit from Valid Topological Order in DAG | Hard | Y | [solution](11_bitmask_dp/solutions/3530-maximum-profit-from-valid-topological-order-in-dag.py) |
+| 3534 | Path Existence Queries in a Graph II | Hard | Y | [solution](19_linear_dp/solutions/3534-path-existence-queries-in-a-graph-ii.py) |
 | 3620 | Network Recovery Pathways | Hard | Y | [solution](18_graph_dp/solutions/3620-network-recovery-pathways.py) |
 | 3651 | Minimum Cost Path with Teleportations | Hard | Y | [solution](18_graph_dp/solutions/3651-minimum-cost-path-with-teleportations.py) |
 | 2127 | Maximum Employees to Be Invited to a Meeting | Hard | Y | [solution](19_linear_dp/solutions/2127-maximum-employees-to-be-invited-to-a-meeting.py) |
@@ -777,8 +777,8 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 3500 | Minimum Cost to Divide Array Into Subarrays | Hard | Y | [solution](19_linear_dp/solutions/3500-minimum-cost-to-divide-array-into-subarrays.py) |
 | 3505 | Minimum Operations to Make Elements Within K Subarrays Equal | Hard | Y | [solution](19_linear_dp/solutions/3505-minimum-operations-elements-within-k-subarrays-equal.py) |
 | 3524 | Find X Value of Array I | Medium | Y | [solution](19_linear_dp/solutions/3524-find-x-value-of-array-i.py) |
-| 3538 | Merge Operations for Minimum Travel Time | Hard | | |
-| 3539 | Find Sum of Array Product of Magical Sequences | Hard | | |
+| 3538 | Merge Operations for Minimum Travel Time | Hard | Y | [solution](19_linear_dp/solutions/3538-merge-operations-for-minimum-travel-time.py) |
+| 3539 | Find Sum of Array Product of Magical Sequences | Hard | Y | [solution](15_counting_combinatorial/solutions/3539-find-sum-of-array-product-of-magical-sequences.py) |
 | 3578 | Count Partitions With Max-Min Difference at Most K | Medium | Y | [solution](19_linear_dp/solutions/3578-count-partitions-with-max-min-difference-at-most-k.py) |
 | 3599 | Partition Array to Minimize XOR | Medium | Y | [solution](19_linear_dp/solutions/3599-partition-array-to-minimize-xor.py) |
 | 3640 | Trionic Array II | Hard | Y | [solution](19_linear_dp/solutions/3640-trionic-array-ii.py) |
