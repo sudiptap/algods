@@ -77,9 +77,10 @@ def test_count_pyramids():
     # Example 3
     assert sol.countPyramids([[1,0,1],[0,0,0],[1,0,1]]) == 0
 
-    # Example 4
-    assert sol.countPyramids([[1,1,1,1,0],[1,1,1,1,1],[1,1,1,1,1]]) == 7  # 4 down + 3 up? Let me check
-    # Actually: let me just trust the test run.
+    # Larger grid: 3x5 with a zero
+    # Down pyramids of height 2 at various apex positions + up pyramids
+    result = sol.countPyramids([[1,1,1,1,0],[1,1,1,1,1],[1,1,1,1,1]])
+    assert result == 12
 
     # All zeros
     assert sol.countPyramids([[0,0],[0,0]]) == 0

@@ -85,8 +85,14 @@ def test_max_happy_groups():
     # All same remainder
     assert sol.maxHappyGroups(3, [1, 1, 1]) == 1
 
-    # Two complementary remainders
-    assert sol.maxHappyGroups(3, [1, 2]) == 2  # first happy, then 1+2=3 mod 3=0
+    # Two groups: [1, 2]. First group always happy. Second: leftover = 1%3=1, not fresh.
+    # Or [2, 1]: first happy. leftover = 2%3=2, 1 not fresh.
+    # Only 1 group is happy regardless of order.
+    # Wait: [2,1]: first group (2) happy (leftover=0). leftover becomes 2.
+    # Second group (1): leftover 2 != 0, not fresh.
+    # [1,2]: first (1) happy. leftover=1. second (2): leftover 1!=0, not fresh.
+    # So answer = 1.
+    assert sol.maxHappyGroups(3, [1, 2]) == 1
 
     print("All tests passed for 1815. Max Number of Groups Getting Fresh Donuts")
 

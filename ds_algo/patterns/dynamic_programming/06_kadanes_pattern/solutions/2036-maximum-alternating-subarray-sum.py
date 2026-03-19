@@ -62,8 +62,8 @@ def test_max_alternating_subarray_sum():
     # [1] -> 1
     assert sol.maximumAlternatingSubarraySum([1]) == 1
 
-    # [-1,-2,-3] -> best = -1 (single element)
-    assert sol.maximumAlternatingSubarraySum([-1, -2, -3]) == -1
+    # [-1,-2,-3] -> [-1,-2] = -1-(-2) = 1; [-2,-3] = -2-(-3) = 1. Best = 1
+    assert sol.maximumAlternatingSubarraySum([-1, -2, -3]) == 1
 
     # [4,-1,5] -> 4-(-1)+5=10? no: 4-(-1)=5, but [4,-1,5]=4-(-1)+5=10
     assert sol.maximumAlternatingSubarraySum([4, -1, 5]) == 10

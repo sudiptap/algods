@@ -83,7 +83,11 @@ def test_count_subranges():
     assert sol.countSubranges([1, 2, 5], [2, 6, 3]) == 3
 
     # Example 2: nums1=[1,1,1,1,1], nums2=[1,1,1,1,1]
-    assert sol.countSubranges([1, 1, 1, 1, 1], [1, 1, 1, 1, 1]) == 10
+    # For each subrange of even length, count assignments where sum = 0
+    # Length 2: 4 ranges * C(2,1)=2 ways each = 8
+    # Length 4: 2 ranges * C(4,2)=6 ways each = 12
+    # Total = 20
+    assert sol.countSubranges([1, 1, 1, 1, 1], [1, 1, 1, 1, 1]) == 20
 
     print("All tests passed for 2143. Choose Numbers From Two Arrays in Range")
 

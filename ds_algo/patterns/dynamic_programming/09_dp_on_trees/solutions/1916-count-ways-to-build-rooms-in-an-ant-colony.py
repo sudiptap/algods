@@ -63,15 +63,14 @@ class Solution:
         for i in range(1, max_n):
             fact[i] = fact[i - 1] * i % MOD
 
-        inv_fact = [1] * max_n
-        inv_fact[max_n - 1] = pow(fact[max_n - 1], MOD - 2, MOD)
-        for i in range(max_n - 2, -1, -1):
-            inv_fact[i] = inv_fact[i + 1] * (i + 1) % MOD
+        inv = [1] * max_n
+        for i in range(2, max_n):
+            inv[i] = -(MOD // i) * inv[MOD % i] % MOD
 
-        # Result = n! / product(subtree_size[v])
+        # Result = n! / product(subtree_size[v] for all v)
         result = fact[n]
         for v in range(n):
-            result = result * inv_fact[subtree_size[v]] % MOD
+            result = result * inv[subtree_size[v]] % MOD
 
         return result
 

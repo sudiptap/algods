@@ -80,8 +80,8 @@ def test_number_of_ways():
     # Exactly 2 seats, no division needed
     assert sol.numberOfWays("SS") == 1
 
-    # Two pairs with gap
-    assert sol.numberOfWays("SSPSS") == 1
+    # Two pairs with plant gap: divider can go in 2 positions
+    assert sol.numberOfWays("SSPSS") == 2
 
     print("All tests passed for 2147. Number of Ways to Divide a Long Corridor")
 

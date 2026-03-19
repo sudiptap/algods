@@ -47,76 +47,61 @@ class Solution:
         Returns:
             Minimum number of operations.
         """
-        # Stack-based parsing
-        # Each element on stack: (value, cost_to_flip) or an operator
-        stack = []
-        ops = []  # operator stack
-
         def combine(left, op, right):
             lv, lc = left
             rv, rc = right
             if op == '&':
                 val = lv & rv
                 if val == 1:
-                    # Both are 1, flip either to 0 (keep &), or change to | (still 1)
                     flip_cost = min(lc, rc)
                 else:
-                    # val == 0
                     if lv == 0 and rv == 0:
-                        # Keep &: flip both to 1: lc + rc
-                        # Change to |: flip one to 1: 1 + min(lc, rc)
                         flip_cost = 1 + min(lc, rc)
                     elif lv == 0 and rv == 1:
-                        # Keep &: flip lv to 1: lc
-                        # Change to |: cost 1 (rv already 1)
                         flip_cost = min(lc, 1)
-                    else:  # lv == 1, rv == 0
+                    else:
                         flip_cost = min(rc, 1)
             else:  # op == '|'
                 val = lv | rv
                 if val == 0:
-                    # Both are 0, flip either to 1
                     flip_cost = min(lc, rc)
                 else:
-                    # val == 1
                     if lv == 1 and rv == 1:
-                        # Keep |: flip both to 0: lc + rc
-                        # Change to &: flip one to 0: 1 + min(lc, rc)
                         flip_cost = 1 + min(lc, rc)
                     elif lv == 1 and rv == 0:
-                        # Keep |: flip lv to 0: lc
-                        # Change to &: cost 1 (rv already 0)
                         flip_cost = min(lc, 1)
-                    else:  # lv == 0, rv == 1
+                    else:
                         flip_cost = min(rc, 1)
             return (val, flip_cost)
 
+        # Use two stacks: values and operators
+        val_stack = []
+        op_stack = []
+
+        def apply_top():
+            right = val_stack.pop()
+            left = val_stack.pop()
+            op = op_stack.pop()
+            val_stack.append(combine(left, op, right))
+
         for ch in expression:
             if ch == '(':
-                stack.append('(')
-                ops.append('(')
-            elif ch == ')':
-                ops.pop()  # remove '('
-                # top of stack has the result inside parens
-                # if there was an operator before '(', combine
-                if ops and ops[-1] != '(':
-                    op = ops.pop()
-                    right = stack.pop()
-                    left = stack.pop()
-                    stack.append(combine(left, op, right))
+                op_stack.append('(')
+            elif ch in '01':
+                val_stack.append((int(ch), 1))
+                # Apply pending operator (not '(')
+                while op_stack and op_stack[-1] in '&|':
+                    apply_top()
             elif ch in '&|':
-                ops.append(ch)
-            else:  # '0' or '1'
-                val = int(ch)
-                stack.append((val, 1))
-                # Check if we can combine with previous
-                if ops and ops[-1] in '&|':
-                    op = ops.pop()
-                    right = stack.pop()
-                    left = stack.pop()
-                    stack.append(combine(left, op, right))
+                op_stack.append(ch)
+            elif ch == ')':
+                # Pop the '('
+                op_stack.pop()  # removes '('
+                # After closing paren, check if there's a pending operator
+                while op_stack and op_stack[-1] in '&|':
+                    apply_top()
 
-        return stack[0][1]
+        return val_stack[0][1]
 
 
 # ---------- tests ----------

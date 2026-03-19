@@ -56,8 +56,8 @@ class Solution:
 def test_minimum_buckets():
     sol = Solution()
 
-    # Example 1: "H..H" -> place at index 1 or 2 -> 1
-    assert sol.minimumBuckets("H..H") == 1
+    # Example 1: "H..H" -> place at index 1 and 2 -> 2
+    assert sol.minimumBuckets("H..H") == 2
 
     # Example 2: ".H.H." -> 1 bucket at index 2 feeds both
     assert sol.minimumBuckets(".H.H.") == 1

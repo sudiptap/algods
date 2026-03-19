@@ -3,7 +3,7 @@
 https://leetcode.com/problems/minimum-cost-to-separate-sentence-into-rows/
 
 Given a sentence of words and max row length k, split into rows. Cost of
-a row (except last) = (k - row_length)^3. Minimize total cost.
+a row (except last) = (k - row_length)^2. Minimize total cost.
 
 Pattern: Linear DP
 Approach:
@@ -48,7 +48,7 @@ class Solution:
                 if j == n - 1:
                     cost = 0  # last row is free
                 else:
-                    cost = (k - length) ** 3
+                    cost = (k - length) ** 2
                 dp[i] = min(dp[i], cost + dp[j + 1])
 
         return dp[0]

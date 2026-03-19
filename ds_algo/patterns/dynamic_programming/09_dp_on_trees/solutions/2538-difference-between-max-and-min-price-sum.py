@@ -5,40 +5,30 @@ https://leetcode.com/problems/difference-between-maximum-and-min-price-sum/
 Pattern: 09 - DP on Trees
 
 ---
-APPROACH: Rerooting DP tracking max path sum
-- For any root, the max cost path starts at root and extends to some leaf.
-  The min cost path is just the root itself (single node, cost = price[root]).
-- So answer = max over all nodes of (max_path_from_node - price[node])
-  = max over all nodes of (max_path_from_node_excluding_endpoint... no).
-- Actually: max_path_from_node = price[node] + max sum of a path going down.
-  Difference = max_path_sum - price[node] only if we remove the far endpoint.
-  Wait: the path includes both endpoints. The "cost" is sum of prices.
-  For a rooted subtree at r: max cost = max path sum from r to any node.
-  Min cost = just price[r] (path of length 0? No, a path has at least one node).
-  Actually min cost path from root r is price[r] (the path is just r).
-  So diff = max_path - price[r]. But which leaf do we exclude?
+APPROACH: Rerooting DP
+- For each node as root, maxCost = max path sum from root to any node in subtree.
+  minCost = price[root] (just the root itself).
+- So answer = max over all roots r of (maxPathSum(r) - price[r]).
+- This equals: find the longest path (by price sum) in the tree, then the answer
+  is that path's total sum minus the minimum endpoint price.
+- Equivalently: for every path in the tree, the score = sum - min(endpoint1, endpoint2).
+- Implementation: for each node, track the two longest downward paths. The best path
+  through a node = longest + second_longest + price[node]. For the answer, subtract
+  the leaf price from one end.
 
-  The answer is: for each possible root, the max path to a leaf minus the leaf's
-  price is the maximum "inner path sum" (path from root to parent of leaf).
-
-  Better: for each node, find the longest path (by sum) starting from it. The answer
-  for that node as root = longest_path - (value of the endpoint if it's a leaf... no).
-
-  Actually re-reading: we want max(maxCost(r) - minCost(r)) over all r.
-  maxCost(r) = max sum path from r. minCost(r) = min sum path from r = price[r].
-  So answer = max over r of (max_path_sum_from_r - price[r]).
-
-  This equals max over r of (max_path_sum_from_r) - price[r].
-  = max over r of (longest path starting at r, minus r's contribution... no, r IS included).
-  = max over r of (sum of path from r to farthest node - price[r]).
-
-  Use rerooting to find max path sum from each node efficiently.
+Simpler approach: DFS computing for each node:
+  - max path sum WITH leaf (path from node to some descendant, all nodes included)
+  - max path sum WITHOUT leaf (same path but exclude the leaf at the end)
+- The answer for node as root = max(down_without[child] + price[node]) over children,
+  meaning the longest path from root but without the far leaf.
 
 Time: O(n)  Space: O(n)
 ---
 """
 
 from typing import List
+import sys
+sys.setrecursionlimit(300000)
 
 
 class Solution:
@@ -51,149 +41,103 @@ class Solution:
             adj[u].append(v)
             adj[v].append(u)
 
-        # First pass: root at 0, compute max path sum going down (including self)
-        # and max path sum excluding the leaf endpoint
-        # down_with[u] = max path sum from u going into subtree (including u and leaf)
-        # down_without[u] = max path sum from u excluding the leaf at the end
-
-        down_with = [0] * n    # includes leaf
-        down_without = [0] * n  # excludes leaf
-
-        # Iterative DFS for tree rooted at 0
-        parent = [-1] * n
-        order = []
-        stack = [0]
-        visited = [False] * n
-        visited[0] = True
-        while stack:
-            u = stack.pop()
-            order.append(u)
-            for v in adj[u]:
-                if not visited[v]:
-                    visited[v] = True
-                    parent[v] = u
-                    stack.append(v)
-
-        # Process in reverse order (leaves first)
-        for u in reversed(order):
-            down_with[u] = price[u]
-            down_without[u] = 0
-            for v in adj[u]:
-                if v == parent[u]:
-                    continue
-                if down_with[v] + price[u] > down_with[u]:
-                    down_with[u] = down_with[v] + price[u]
-                if down_without[v] + price[u] > down_without[u]:
-                    down_without[u] = down_without[v] + price[u]
-
-        # Second pass: rerooting
-        # up_with[u] = max path sum going up from u (through parent) including far endpoint
-        # up_without[u] = same but excluding far endpoint
-        up_with = [0] * n
-        up_without = [0] * n
-
-        # For rerooting, we need top-2 children values for each node
-        # to handle the case where the best child is the one we're rerooting to
-        # Store top-2 down_with and down_without for each node's children
-        top2_with = [[] for _ in range(n)]  # list of (value, child_index)
-        top2_without = [[] for _ in range(n)]
-
-        for u in order:
-            children_with = []
-            children_without = []
-            for v in adj[u]:
-                if v == parent[u]:
-                    continue
-                children_with.append((down_with[v], v))
-                children_without.append((down_without[v], v))
-            children_with.sort(reverse=True)
-            children_without.sort(reverse=True)
-            top2_with[u] = children_with[:2]
-            top2_without[u] = children_without[:2]
-
         ans = 0
 
-        for u in order:
+        def dfs(u, parent):
+            """Returns (with_leaf, without_leaf) for paths starting at u going down.
+            with_leaf = max path sum from u to some descendant (includes all nodes)
+            without_leaf = same but exclude the leaf endpoint"""
+            nonlocal ans
+
+            with_leaf = price[u]  # just u itself (u is a leaf)
+            without_leaf = 0       # path of just u, but excluding the leaf (u) = 0
+
             for v in adj[u]:
-                if v == parent[u]:
+                if v == parent:
                     continue
-                # Compute up_with[v] and up_without[v]
-                # Path goes from v -> u -> (up from u or down into another subtree of u)
-                # Best "with leaf" from u excluding subtree v:
-                best_down_with = 0
-                for val, child in top2_with[u]:
-                    if child != v:
-                        best_down_with = val
-                        break
+                child_with, child_without = dfs(v, u)
 
-                best_down_without = 0
-                for val, child in top2_without[u]:
-                    if child != v:
-                        best_down_without = val
-                        break
+                # Combine: path through u using one child's path and current best from another
+                # The "answer" for paths through u:
+                # Option 1: one side has leaf removed: with_leaf (old) + child_without + price[u]?
+                # No. Let me think again.
+                # A path through u uses at most 2 branches. For the answer, we remove
+                # one endpoint (leaf) from the path.
+                # Score = path_sum - one_leaf_price
+                # = (branch1_with_leaf + branch2_with_leaf - price[u]) - min_leaf_of_either_branch
+                # = branch1_without + branch2_with - price[u] + price[u]  (if we remove leaf of branch1)
+                # Wait, let me be more careful:
+                # branch1 contributes: with_leaf1 = price[u->...->leaf1], includes u
+                # Actually with_leaf already includes price[u].
+                # path sum through u = with_leaf (from one side, includes u) + child_with (other side, includes child but NOT u)
+                # Hmm, the child's with_leaf includes child but not u.
+                # So: path through u = with_leaf_from_one_branch + child_with_from_other (the child's subtree, not including u) + price[u]?
+                # No. with_leaf already includes price[u]. child_with includes price[child] to some leaf.
+                # So total path = with_leaf + child_with - price[u]? No that doesn't make sense either.
 
-                # up_with[v] = price[u] + max(up_with[u], best_down_with)
-                up_with[v] = price[u] + max(up_with[u], best_down_with)
-                # up_without[v] = price[u] + max(up_without[u], best_down_without)
-                up_without[v] = price[u] + max(up_without[u], best_down_without)
+                # Let me redefine clearly:
+                # with_leaf[u] = max sum of a path from u downward to some leaf, including u and the leaf
+                # without_leaf[u] = max sum of a path from u downward, including u but NOT the leaf at the end
 
-            # Now compute answer for node u
-            # max path from u = max(down_with[u], up_with[u] + price[u])...
-            # Wait, down_with[u] already includes price[u].
-            # up_with[u] is the max path going up from u through parent, NOT including u.
-            # So total path with leaf = max(down_with[u], up_with[u] + price[u])
-            # And path without leaf = max(down_without[u], up_without[u] + price[u])
-            # But we want max_path - price[u] = max path excluding one endpoint.
-            #
-            # Actually: for node u, the longest path from u includes u.
-            # diff = longest_path_from_u - price[u]
-            # This is the same as removing u from the path... no, we remove the leaf.
-            # Hmm, the diff = max_cost_path - min_cost_path = max_path - price[u].
-            # max_path includes both endpoints (u and the far node).
-            # We want max_path - price[u]. But that's just the max path WITHOUT u.
-            # No: max_path = price[u] + ... + price[leaf]. Minus price[u] = path minus root.
-            #
-            # So the answer for u = max(down_with[u], up_with[u] + price[u]) - price[u]
-            # = max(down_with[u] - price[u], up_with[u])
+                # For the answer: considering u as the "bend" point of a path:
+                # path uses two branches from u: total = branch_a + branch_b - price[u] (u counted once)
+                # To compute diff for this path: total - min(leaf_a, leaf_b)
+                # If we remove leaf from branch_a: score = without_leaf_a + child_b_with_leaf
+                # Wait: without_leaf from branch_a (which includes u) + child_b's with_leaf
+                # But u is counted in without_leaf_a already. So:
+                # path without one leaf = without_leaf_a + (child_with from branch_b)
+                # where child_with = with_leaf of child - ... no.
+                #
+                # Let me define:
+                # dw[u] = max (path sum from u to descendant, EXCLUDING the leaf) = price[u] + max(dw[child])
+                # dl[u] = max (path sum from u to descendant, INCLUDING leaf) = price[u] + max(dl[child])
+                # For a leaf node: dl = price[leaf], dw = 0
+                #
+                # For a path through u using two branches (children c1, c2):
+                # Remove leaf from c1's side: score = dw_c1_side + dl_c2_side (both include price[u])
+                #   = (price[u] + dw[c1]) + dl[c2]  -- but price[u] counted once, should be:
+                #   Nope. dw[u] from c1's direction = price[u] + dw[c1]? Or dw[c1] includes price[c1]...
+                #
+                # Let me redefine from child perspective:
+                # cdl[c] = max path sum from c downward including leaf = dl[c] (includes c)
+                # cdw[c] = max path sum from c downward excluding leaf = dw[c] (includes c, excludes far leaf)
+                #
+                # For path through u using children c1 and c2 (and removing one leaf):
+                # Score option A (remove leaf of c1 side):
+                #   = cdw[c1] + price[u] + cdl[c2]
+                # Score option B (remove leaf of c2 side):
+                #   = cdl[c1] + price[u] + cdw[c2]
+                #
+                # For path using just one child (u is one endpoint, leaf is other):
+                # Score = cdw[c] + price[u]  (remove leaf) or cdl[c] (remove u... = cdl[c] - 0 = cdl[c])
+                # Wait removing u means score = cdl[c] (the path is u to leaf, remove u endpoint)
+                # Actually: diff = path_sum - min_endpoint. If u is endpoint:
+                # Score = total_path - price[u] (if price[u] is the min) = cdl[c]
+                # Or score = total_path - leaf_price = cdw[c] + price[u]
 
-            # But we also should consider: the max path could exclude the endpoint on
-            # the other end, giving us max_path - price[far_endpoint].
-            # This means for node u: max(path_including_leaf - price[u],
-            #                              path_excluding_leaf)
-            # = max(path_with - price[u], path_without)
+                # Update answer: combine current best from u's side with new child
+                # ans = max(ans, old_with_leaf_from_u * child_without + ...)
+                ans = max(ans, with_leaf + child_without)  # remove leaf from child's side
+                ans = max(ans, without_leaf + child_with)   # remove leaf from u's current best side
 
-            best_with = max(down_with[u], up_with[u] + price[u])
-            best_without = max(down_without[u], up_without[u] + price[u])
+                # Update u's values
+                with_leaf = max(with_leaf, child_with + price[u])
+                without_leaf = max(without_leaf, child_without + price[u])
 
-            # diff can be: best_with - price[u] (min path = just u, subtract leaf on far end... no)
-            # Actually the problem: minCost path from u = price[u] (just the node).
-            # maxCost path from u = best_with (longest path including leaf).
-            # answer for u = best_with - price[u].
-            # But we can also interpret: the path is from u to some node v.
-            # maxCost = sum of all prices on path.
-            # minCost = min cost path = just price[u] (path of length 1).
-            # So diff = maxCost - minCost = best_with - price[u].
+            # Also consider u as an endpoint: the path is just u to some descendant
+            # Score = with_leaf - price[u] (remove u as leaf) -> this = child_with
+            # Or score = without_leaf (remove the descendant leaf)
+            # These are already captured above since we track without_leaf
 
-            # However, there's another interpretation: remove one endpoint from the max path.
-            # The max path with leaf removed = best_without. And best_without might be
-            # larger than best_with - price[u] if the leaf has a high price.
-            # So answer = max(best_with - price[u], best_without)
-            # Wait no, best_without excludes the far endpoint, not u. So:
-            # best_without = path from u to parent_of_leaf = best_with - price[leaf].
-            # And best_with - price[u] = path from child_of_u to leaf.
-            # We want max(best_with - price[u]) over all u (the "remove root" interpretation).
-            # But that equals best_without when looking from the leaf's perspective.
-            #
-            # Let me simplify: answer = max over all u of (max_downward_path_from_u_without_leaf)
-            # which = down_without[u] or up-path without endpoint.
-            # OR: max over all u of (best_with - price[u]).
+            # Single-branch answer: path from u downward
+            # Removing the leaf: without_leaf (already tracked)
+            # Removing u: with_leaf - price[u] = max child_with
+            ans = max(ans, without_leaf)  # path from u, remove far leaf
+            ans = max(ans, with_leaf - price[u])  # path from u, remove u itself
 
-            ans = max(ans, best_with - price[u])
+            return with_leaf, without_leaf
 
-            # Also consider: removing the far leaf from the path
-            # This equals best_without (for paths going down) or up_without + price[u]
-            ans = max(ans, best_without)
-
+        dfs(0, -1)
         return ans
 
 

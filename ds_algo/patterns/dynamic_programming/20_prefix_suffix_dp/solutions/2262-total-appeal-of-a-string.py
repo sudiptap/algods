@@ -39,6 +39,6 @@ if __name__ == "__main__":
     assert sol.appealSum("code") == 20
     assert sol.appealSum("a") == 1
     assert sol.appealSum("aa") == 3
-    assert sol.appealSum("ab") == 5
+    assert sol.appealSum("ab") == 4
 
     print("all tests passed")

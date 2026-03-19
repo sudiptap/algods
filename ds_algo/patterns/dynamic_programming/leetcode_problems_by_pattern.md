@@ -262,7 +262,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 2005 | Subtree Removal Game with Fibonacci Tree | Hard | Y | [solution](09_dp_on_trees/solutions/2005-subtree-removal-game-with-fibonacci-tree.py) |
 | 2313 | Minimum Flips in Binary Tree to Get Result | Hard | Y | [solution](09_dp_on_trees/solutions/2313-minimum-flips-in-binary-tree-to-get-result.py) |
 | 2538 | Difference Between Maximum and Minimum Price Sum | Hard | Y | [solution](09_dp_on_trees/solutions/2538-difference-between-max-and-min-price-sum.py) |
-| 2581 | Count Number of Possible Root Nodes | Hard | | |
+| 2581 | Count Number of Possible Root Nodes | Hard | Y | [solution](09_dp_on_trees/solutions/2581-count-number-of-possible-root-nodes.py) |
 | 2646 | Minimize the Total Price of the Trips | Hard | | |
 | 2867 | Count Valid Paths in a Tree | Hard | | |
 | 2920 | Maximum Points After Collecting Coins From All Nodes | Hard | | |
@@ -299,7 +299,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 1594 | Maximum Non Negative Product in a Matrix | Medium | Y | [solution](10_dp_on_grids/solutions/1594-maximum-non-negative-product-in-a-matrix.py) |
 | 2304 | Minimum Path Cost in a Grid | Medium | Y | [solution](10_dp_on_grids/solutions/2304-minimum-path-cost-in-a-grid.py) |
 | 2510 | Check if There is a Path With Equal Number of 0's And 1's | Medium | Y | [solution](10_dp_on_grids/solutions/2510-check-if-there-is-a-path-with-equal-number-of-0s-and-1s.py) |
-| 2556 | Disconnect Path in a Binary Matrix by at Most One Flip | Medium | | |
+| 2556 | Disconnect Path in a Binary Matrix by at Most One Flip | Medium | Y | [solution](10_dp_on_grids/solutions/2556-disconnect-path-in-a-binary-matrix-by-at-most-one-flip.py) |
 | 2684 | Maximum Number of Moves in a Grid | Medium | Y | [solution](10_dp_on_grids/solutions/2684-maximum-number-of-moves-in-a-grid.py) |
 | 3148 | Maximum Difference Score in a Grid | Medium | | |
 | 3418 | Maximum Amount of Money Robot Can Earn | Medium | | |
@@ -339,7 +339,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 1947 | Maximum Compatibility Score Sum | Medium | Y | [solution](11_bitmask_dp/solutions/1947-maximum-compatibility-score-sum.py) |
 | 1986 | Minimum Number of Work Sessions to Finish the Tasks | Medium | Y | [solution](11_bitmask_dp/solutions/1986-minimum-number-of-work-sessions-to-finish-the-tasks.py) |
 | 2305 | Fair Distribution of Cookies | Medium | Y | [solution](11_bitmask_dp/solutions/2305-fair-distribution-of-cookies.py) |
-| 2572 | Count the Number of Square-Free Subsets | Medium | | |
+| 2572 | Count the Number of Square-Free Subsets | Medium | Y | [solution](11_bitmask_dp/solutions/2572-count-the-number-of-square-free-subsets.py) |
 | 2741 | Special Permutations | Medium | | |
 | 1066 | Campus Bikes II | Medium | Y | [solution](11_bitmask_dp/solutions/1066-campus-bikes-ii.py) |
 | 2850 | Minimum Moves to Spread Stones Over Grid | Medium | | |
@@ -483,7 +483,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 920 | Number of Music Playlists | Hard | Y | [solution](15_counting_combinatorial/solutions/920-number-of-music-playlists.py) |
 | 1359 | Count All Valid Pickup and Delivery Options | Hard | Y | [solution](15_counting_combinatorial/solutions/1359-count-all-valid-pickup-and-delivery-options.py) |
 | 1692 | Count Ways to Distribute Candies | Hard | Y | [solution](15_counting_combinatorial/solutions/1692-count-ways-to-distribute-candies.py) |
-| 2184 | Number of Ways to Build Sturdy Brick Wall | Medium | | |
+| 2184 | Number of Ways to Build Sturdy Brick Wall | Medium | Y | [solution](15_counting_combinatorial/solutions/2184-number-of-ways-to-build-sturdy-brick-wall.py) |
 | 2147 | Number of Ways to Divide a Long Corridor | Hard | Y | [solution](15_counting_combinatorial/solutions/2147-number-of-ways-to-divide-a-long-corridor.py) |
 | 2552 | Count Increasing Quadruplets | Hard | Y | [solution](19_linear_dp/solutions/2552-count-increasing-quadruplets.py) |
 | 2930 | Number of Strings Which Can Be Rearranged to Contain Substring | Medium | | |
@@ -536,7 +536,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 1987 | Number of Unique Good Subsequences | Hard | Y | [solution](16_string_dp/solutions/1987-number-of-unique-good-subsequences.py) |
 | 2430 | Maximum Deletions on a String | Hard | Y | [solution](16_string_dp/solutions/2430-maximum-deletions-on-a-string.py) |
 | 2478 | Number of Beautiful Partitions | Hard | Y | [solution](08_palindromic_subsequence/solutions/2478-number-of-beautiful-partitions.py) |
-| 2573 | Find the String with LCP | Hard | | |
+| 2573 | Find the String with LCP | Hard | Y | [solution](16_string_dp/solutions/2573-find-the-string-with-lcp.py) |
 | 2851 | String Transformation | Hard | | |
 | 2911 | Minimum Changes to Make K Semi-palindromes | Hard | | |
 | 2977 | Minimum Cost to Convert String II | Hard | | |
@@ -659,9 +659,9 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 2495 | Number of Subarrays Having Even Product | Medium | Y | [solution](19_linear_dp/solutions/2495-number-of-subarrays-having-even-product.py) |
 | 2522 | Partition String Into Substrings With Values at Most K | Medium | Y | [solution](19_linear_dp/solutions/2522-partition-string-into-substrings-with-values-at-most-k.py) |
 | 2533 | Number of Good Binary Strings | Medium | Y | [solution](19_linear_dp/solutions/2533-number-of-good-binary-strings.py) |
-| 2560 | House Robber IV | Medium | | |
+| 2560 | House Robber IV | Medium | Y | [solution](19_linear_dp/solutions/2560-house-robber-iv.py) |
 | 2052 | Minimum Cost to Separate Sentence Into Rows | Medium | Y | [solution](19_linear_dp/solutions/2052-minimum-cost-to-separate-sentence-into-rows.py) |
-| 2571 | Minimum Operations to Reduce an Integer to 0 | Medium | | |
+| 2571 | Minimum Operations to Reduce an Integer to 0 | Medium | Y | [solution](19_linear_dp/solutions/2571-minimum-operations-to-reduce-an-integer-to-0.py) |
 | 2616 | Minimize the Maximum Difference of Pairs | Medium | | |
 | 2638 | Count the Number of K-Free Subsets | Medium | | |
 | 2712 | Minimum Cost to Make All Characters Equal | Medium | | |
@@ -739,8 +739,8 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 2152 | Minimum Number of Lines to Cover Points | Medium | Y | [solution](19_linear_dp/solutions/2152-minimum-number-of-lines-to-cover-points.py) |
 | 2163 | Minimum Difference in Sums After Removal of Elements | Hard | Y | [solution](19_linear_dp/solutions/2163-minimum-difference-in-sums-after-removal-of-elements.py) |
 | 2167 | Minimum Time to Remove All Cars Containing Illegal Goods | Hard | Y | [solution](19_linear_dp/solutions/2167-minimum-time-to-remove-all-cars-containing-illegal-goods.py) |
-| 2188 | Minimum Time to Finish the Race | Hard | | |
-| 2189 | Number of Ways to Build House of Cards | Medium | | |
+| 2188 | Minimum Time to Finish the Race | Hard | Y | [solution](19_linear_dp/solutions/2188-minimum-time-to-finish-the-race.py) |
+| 2189 | Number of Ways to Build House of Cards | Medium | Y | [solution](15_counting_combinatorial/solutions/2189-number-of-ways-to-build-house-of-cards.py) |
 | 2209 | Minimum White Tiles After Covering With Carpets | Hard | Y | [solution](19_linear_dp/solutions/2209-minimum-white-tiles-after-covering-with-carpets.py) |
 | 2218 | Maximum Value of K Coins From Piles | Hard | Y | [solution](19_linear_dp/solutions/2218-maximum-value-of-k-coins-from-piles.py) |
 | 2263 | Make Array Non-decreasing or Non-increasing | Hard | Y | [solution](19_linear_dp/solutions/2263-make-array-non-decreasing-or-non-increasing.py) |

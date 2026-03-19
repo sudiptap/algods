@@ -50,7 +50,7 @@ if __name__ == "__main__":
     sol = Solution()
 
     assert sol.isThereAPath([[0, 1, 0, 0], [0, 1, 0, 0], [1, 0, 1, 0]]) == True
-    assert sol.isThereAPath([[1, 1, 1], [0, 0, 0]]) == False  # path_len=4, possible 2 ones 2 zeros
-    assert sol.isThereAPath([[0, 1], [1, 0]]) == True
+    assert sol.isThereAPath([[1, 1, 1], [0, 0, 0]]) == True  # path (1,1,0,0) has 2 of each
+    assert sol.isThereAPath([[0, 1], [1, 0]]) == False  # path_len=3 is odd
 
     print("all tests passed")

@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     assert sol.maximumProfit([5, 4, 6, 2, 3], [8, 5, 4, 3, 5], 10) == 6
     assert sol.maximumProfit([2, 2, 5], [3, 4, 10], 6) == 5
-    assert sol.maximumProfit([3, 3, 12], [0, 3, 15], 10) == 3
+    assert sol.maximumProfit([3, 3, 12], [0, 3, 15], 10) == 0
     assert sol.maximumProfit([1], [2], 0) == 0
 
     print("all tests passed")

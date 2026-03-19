@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     assert sol.numberOfWays(1, 2, 3) == 3
     assert sol.numberOfWays(2, 5, 10) == 0
-    assert sol.numberOfWays(0, 0, 2) == 1
+    assert sol.numberOfWays(0, 0, 2) == 2
     assert sol.numberOfWays(0, 0, 0) == 1
 
     print("all tests passed")

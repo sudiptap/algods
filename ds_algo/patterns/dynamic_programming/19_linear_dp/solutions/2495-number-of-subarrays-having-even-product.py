@@ -42,6 +42,6 @@ if __name__ == "__main__":
     assert sol.evenProduct([9, 6, 7, 13]) == 6
     assert sol.evenProduct([7, 3, 5]) == 0
     assert sol.evenProduct([2]) == 1
-    assert sol.evenProduct([1, 2, 3]) == 5
+    assert sol.evenProduct([1, 2, 3]) == 4
 
     print("all tests passed")

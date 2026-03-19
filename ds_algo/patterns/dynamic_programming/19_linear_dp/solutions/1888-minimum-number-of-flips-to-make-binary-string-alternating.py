@@ -58,8 +58,8 @@ class Solution:
 def test_min_flips():
     sol = Solution()
 
-    # Example 1: "111000" -> rotate to "100011" then flip -> 2
-    assert sol.minFlips("111000") == 1
+    # Example 1: "111000" -> rotate to "100011", flip 2 chars -> 2
+    assert sol.minFlips("111000") == 2
 
     # Example 2
     assert sol.minFlips("010") == 0
