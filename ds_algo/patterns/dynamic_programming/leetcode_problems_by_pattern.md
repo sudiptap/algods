@@ -361,7 +361,7 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 1799 | Maximize Score After N Operations | Hard | Y | [solution](11_bitmask_dp/solutions/1799-maximize-score-after-n-operations.py) |
 | 1815 | Maximum Number of Groups Getting Fresh Donuts | Hard | Y | [solution](11_bitmask_dp/solutions/1815-max-number-of-groups-getting-fresh-donuts.py) |
 | 1879 | Minimum XOR Sum of Two Arrays | Hard | Y | [solution](11_bitmask_dp/solutions/1879-minimum-xor-sum-of-two-arrays.py) |
-| 2172 | Maximum AND Sum of Array | Hard | | |
+| 2172 | Maximum AND Sum of Array | Hard | Y | [solution](11_bitmask_dp/solutions/2172-maximum-and-sum-of-array.py) |
 | 2247 | Maximum Cost of Trip With K Highways | Hard | Y | [solution](11_bitmask_dp/solutions/2247-maximum-cost-of-trip-with-k-highways.py) |
 | 2403 | Minimum Time to Kill All Monsters | Hard | Y | [solution](11_bitmask_dp/solutions/2403-minimum-time-to-kill-all-monsters.py) |
 | 2992 | Number of Self-Divisible Permutations | Hard | | |
@@ -736,9 +736,9 @@ Quick-reference study sheet — every DP-tagged problem grouped by its dominant 
 | 1994 | The Number of Good Subsets | Hard | Y | [solution](19_linear_dp/solutions/1994-the-number-of-good-subsets.py) |
 | 2035 | Partition Array Into Two Arrays to Minimize Sum Difference | Hard | Y | [solution](19_linear_dp/solutions/2035-partition-array-into-two-arrays-to-minimize-sum-difference.py) |
 | 2143 | Choose Numbers From Two Arrays in Range | Hard | Y | [solution](19_linear_dp/solutions/2143-choose-numbers-from-two-arrays-in-range.py) |
-| 2152 | Minimum Number of Lines to Cover Points | Medium | | |
-| 2163 | Minimum Difference in Sums After Removal of Elements | Hard | | |
-| 2167 | Minimum Time to Remove All Cars Containing Illegal Goods | Hard | | |
+| 2152 | Minimum Number of Lines to Cover Points | Medium | Y | [solution](19_linear_dp/solutions/2152-minimum-number-of-lines-to-cover-points.py) |
+| 2163 | Minimum Difference in Sums After Removal of Elements | Hard | Y | [solution](19_linear_dp/solutions/2163-minimum-difference-in-sums-after-removal-of-elements.py) |
+| 2167 | Minimum Time to Remove All Cars Containing Illegal Goods | Hard | Y | [solution](19_linear_dp/solutions/2167-minimum-time-to-remove-all-cars-containing-illegal-goods.py) |
 | 2188 | Minimum Time to Finish the Race | Hard | | |
 | 2189 | Number of Ways to Build House of Cards | Medium | | |
 | 2209 | Minimum White Tiles After Covering With Carpets | Hard | Y | [solution](19_linear_dp/solutions/2209-minimum-white-tiles-after-covering-with-carpets.py) |
